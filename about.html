@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>About Us - Maya Hub</title>
+
+<meta name="description" content="Learn more about Maya Hub, our mission, and our freelancer marketplace platform.">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+/* ===== BASE ===== */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:
+linear-gradient(rgba(15,23,42,0.88), rgba(15,23,42,0.92)),
+url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2070&auto=format&fit=crop');
+
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+background-repeat:no-repeat;
+
+color:white;
+line-height:1.8;
+min-height:100vh;
+}
+
+/* ===== HEADER ===== */
+header{
+background:rgba(17,24,39,0.88);
+backdrop-filter:blur(14px);
+
+padding:18px 15px;
+
+position:sticky;
+top:0;
+z-index:1000;
+
+box-shadow:0 0 25px rgba(0,0,0,0.35);
+
+border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+.logo{
+text-align:center;
+font-size:40px;
+font-weight:700;
+color:#38bdf8;
+
+letter-spacing:1px;
+
+text-shadow:0 0 15px rgba(56,189,248,0.35);
+}
+
+.sub-text{
+text-align:center;
+margin-top:6px;
+font-size:15px;
+color:#cbd5e1;
+letter-spacing:.5px;
+}
+
+/* ===== NAVBAR ===== */
+.top-navbar{
+display:flex;
+justify-content:center;
+align-items:center;
+flex-wrap:wrap;
+gap:12px;
+
+margin-top:18px;
+padding-top:15px;
+
+border-top:1px solid rgba(255,255,255,0.08);
+}
+
+.top-navbar a{
+text-decoration:none;
+color:#e2e8f0;
+
+padding:11px 18px;
+border-radius:14px;
+
+transition:.3s;
+
+font-size:15px;
+font-weight:500;
+
+display:flex;
+align-items:center;
+gap:8px;
+
+background:rgba(255,255,255,0.03);
+border:1px solid rgba(255,255,255,0.05);
+}
+
+.top-navbar a:hover{
+background:rgba(56,189,248,0.15);
+color:#38bdf8;
+
+border-color:rgba(56,189,248,0.4);
+
+transform:translateY(-2px);
+}
+
+.top-navbar i{
+font-size:14px;
+}
+
+/* ===== CONTAINER ===== */
+.container{
+width:100%;
+max-width:1400px;
+margin:auto;
+padding:35px 15px;
+}
+
+/* ===== HERO ===== */
+.hero{
+text-align:center;
+margin-bottom:35px;
+}
+
+.hero h1{
+font-size:48px;
+color:#38bdf8;
+margin-bottom:12px;
+text-shadow:0 0 15px rgba(56,189,248,0.5);
+}
+
+.hero p{
+max-width:900px;
+margin:auto;
+color:#cbd5e1;
+font-size:17px;
+line-height:1.8;
+}
+
+/* ===== CARD ===== */
+.card{
+width:100%;
+
+background:rgba(30,41,59,0.75);
+backdrop-filter:blur(10px);
+
+padding:25px;
+border-radius:22px;
+
+margin-bottom:22px;
+
+border:1px solid rgba(255,255,255,0.08);
+
+transition:.3s;
+
+overflow:hidden;
+}
+
+.card:hover{
+transform:translateY(-5px);
+
+border-color:#38bdf8;
+
+box-shadow:0 10px 30px rgba(0,0,0,0.25);
+}
+
+.card h2{
+color:#38bdf8;
+margin-bottom:12px;
+
+font-size:28px;
+
+word-break:break-word;
+}
+
+.card p{
+color:#cbd5e1;
+font-size:16px;
+line-height:1.9;
+}
+
+/* ===== INFO GRID ===== */
+.info-grid{
+display:flex;
+flex-direction:column;
+gap:22px;
+}
+
+/* ===== INFO BOX ===== */
+.info-box{
+width:100%;
+
+background:rgba(17,24,39,0.75);
+backdrop-filter:blur(8px);
+
+padding:24px;
+border-radius:22px;
+
+border:1px solid rgba(255,255,255,0.08);
+
+transition:.3s;
+}
+
+.info-box:hover{
+transform:translateY(-4px);
+border-color:#38bdf8;
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+
+.info-box i{
+font-size:34px;
+margin-bottom:14px;
+color:#38bdf8;
+}
+
+.info-box h3{
+font-size:26px;
+margin-bottom:12px;
+color:#38bdf8;
+}
+
+.info-box p{
+font-size:15px;
+color:#cbd5e1;
+line-height:1.9;
+}
+
+/* ===== FOOTER ===== */
+footer{
+text-align:center;
+
+padding:30px 15px;
+
+margin-top:50px;
+
+background:rgba(17,24,39,0.85);
+backdrop-filter:blur(10px);
+
+color:#94a3b8;
+
+border-top:1px solid rgba(255,255,255,0.08);
+}
+
+footer p{
+margin-bottom:5px;
+}
+
+/* ===== TABLET ===== */
+@media(max-width:900px){
+
+.hero h1{
+font-size:40px;
+}
+
+.card{
+padding:22px;
+}
+
+.card h2{
+font-size:24px;
+}
+
+.info-box{
+padding:22px;
+}
+
+.info-box h3{
+font-size:22px;
+}
+
+}
+
+/* ===== MOBILE ===== */
+@media(max-width:768px){
+
+.logo{
+font-size:32px;
+}
+
+.sub-text{
+font-size:14px;
+}
+
+.top-navbar{
+gap:10px;
+}
+
+.top-navbar a{
+padding:10px 15px;
+font-size:14px;
+}
+
+.container{
+padding:30px 12px;
+}
+
+.hero h1{
+font-size:34px;
+}
+
+.hero p{
+font-size:15px;
+}
+
+.card{
+padding:20px;
+border-radius:18px;
+}
+
+.card h2{
+font-size:22px;
+}
+
+.card p{
+font-size:14px;
+}
+
+.info-box{
+padding:20px;
+border-radius:18px;
+}
+
+.info-box h3{
+font-size:20px;
+}
+
+.info-box p{
+font-size:14px;
+}
+
+}
+
+/* ===== SMALL MOBILE ===== */
+@media(max-width:480px){
+
+.logo{
+font-size:28px;
+}
+
+.container{
+padding:25px 12px;
+}
+
+.hero h1{
+font-size:28px;
+}
+
+.hero p{
+font-size:14px;
+}
+
+.card{
+padding:18px;
+border-radius:16px;
+}
+
+.card h2{
+font-size:20px;
+}
+
+.card p{
+font-size:13px;
+line-height:1.8;
+}
+
+.info-box{
+padding:18px;
+border-radius:16px;
+}
+
+.info-box i{
+font-size:30px;
+}
+
+.info-box h3{
+font-size:18px;
+}
+
+.info-box p{
+font-size:13px;
+line-height:1.8;
+}
+
+footer{
+font-size:14px;
+}
+
+.top-navbar a{
+font-size:13px;
+padding:9px 13px;
+border-radius:12px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ===== HEADER ===== -->
+<header>
+
+<div class="logo">Maya Hub</div>
+
+<div class="sub-text">
+Freelancer Marketplace System
+</div>
+
+<nav class="top-navbar">
+
+<a href="index.html">
+<i class="fa-solid fa-house"></i> Home
+</a>
+
+<a href="about.html">
+<i class="fa-solid fa-circle-info"></i> About
+</a>
+
+<a href="privacy-policy.html">
+<i class="fa-solid fa-shield-halved"></i> Privacy
+</a>
+
+<a href="terms.html">
+<i class="fa-solid fa-file-contract"></i> Terms
+</a>
+
+<a href="contact.html">
+<i class="fa-solid fa-envelope"></i> Contact
+</a>
+
+<a href="faq.html">
+<i class="fa-solid fa-circle-question"></i> FAQ
+</a>
+
+</nav>
+
+</header>
+
+<!-- ===== CONTAINER ===== -->
+<div class="container">
+
+<!-- ===== HERO ===== -->
+<div class="hero">
+
+<h1>About Maya Hub</h1>
+
+<p>
+Maya Hub is a modern freelancer marketplace platform where clients and freelancers can easily connect for web development, UI/UX design, SEO, and digital marketing services.
+</p>
+
+</div>
+
+<!-- ===== CARD ===== -->
+<div class="card">
+
+<h2>Who We Are</h2>
+
+<p>
+Maya Hub was created to help freelancers showcase their skills and connect with clients worldwide. Our platform is designed to make online hiring simple, modern, secure, and user-friendly for everyone.
+</p>
+
+</div>
+
+<!-- ===== CARD ===== -->
+<div class="card">
+
+<h2>Our Mission</h2>
+
+<p>
+Our mission is to build a trusted freelancer community where businesses can easily discover talented professionals for website development, design, SEO optimization, and digital growth services.
+</p>
+
+</div>
+
+<!-- ===== INFO GRID ===== -->
+<div class="info-grid">
+
+<!-- ===== INFO BOX ===== -->
+<div class="info-box">
+
+<i class="fa-solid fa-laptop-code"></i>
+
+<h3>Web Development</h3>
+
+<p>
+Professional responsive website development services for startups, businesses, and personal brands.
+</p>
+
+</div>
+
+<!-- ===== INFO BOX ===== -->
+<div class="info-box">
+
+<i class="fa-solid fa-palette"></i>
+
+<h3>UI/UX Design</h3>
+
+<p>
+Creative and modern user interface design solutions for websites, dashboards, and mobile applications.
+</p>
+
+</div>
+
+<!-- ===== INFO BOX ===== -->
+<div class="info-box">
+
+<i class="fa-solid fa-chart-line"></i>
+
+<h3>Digital Marketing</h3>
+
+<p>
+SEO optimization and digital marketing strategies to help businesses grow online successfully.
+</p>
+
+</div>
+
+</div>
+
+<!-- ===== CARD ===== -->
+<div class="card">
+
+<h2>Why Choose Maya Hub?</h2>
+
+<p>
+✔ Easy freelancer discovery<br><br>
+
+✔ Modern responsive platform<br><br>
+
+✔ Professional freelancer profiles<br><br>
+
+✔ Fast communication system<br><br>
+
+✔ Mobile-friendly experience<br><br>
+
+✔ Clean and secure design<br><br>
+
+✔ Easy navigation for clients and freelancers
+</p>
+
+</div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+
+<p>
+© 2026 Maya Hub • All Rights Reserved
+</p>
+
+<p>
+Made with ❤️ by Maya Hub
+</p>
+
+</footer>
+
+</body>
+</html>

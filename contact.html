@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact Us - Maya Hub</title>
+
+<meta name="description" content="Contact Maya Hub for support, business inquiries, freelancer opportunities, and partnerships.">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+/* ===== BASE ===== */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:
+linear-gradient(rgba(15,23,42,0.88), rgba(15,23,42,0.92)),
+url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2070&auto=format&fit=crop');
+
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+background-repeat:no-repeat;
+
+color:white;
+line-height:1.8;
+min-height:100vh;
+}
+
+/* ===== HEADER ===== */
+header{
+background:rgba(17,24,39,0.88);
+backdrop-filter:blur(14px);
+
+padding:18px 15px;
+
+position:sticky;
+top:0;
+z-index:1000;
+
+box-shadow:0 0 25px rgba(0,0,0,0.35);
+
+border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+.logo{
+text-align:center;
+font-size:40px;
+font-weight:700;
+color:#38bdf8;
+
+letter-spacing:1px;
+
+text-shadow:0 0 15px rgba(56,189,248,0.35);
+}
+
+.sub-text{
+text-align:center;
+margin-top:6px;
+font-size:15px;
+color:#cbd5e1;
+letter-spacing:.5px;
+}
+
+/* ===== NAVBAR ===== */
+.top-navbar{
+display:flex;
+justify-content:center;
+align-items:center;
+flex-wrap:wrap;
+gap:12px;
+
+margin-top:18px;
+padding-top:15px;
+
+border-top:1px solid rgba(255,255,255,0.08);
+}
+
+.top-navbar a{
+text-decoration:none;
+color:#e2e8f0;
+
+padding:11px 18px;
+border-radius:14px;
+
+transition:.3s;
+
+font-size:15px;
+font-weight:500;
+
+display:flex;
+align-items:center;
+gap:8px;
+
+background:rgba(255,255,255,0.03);
+border:1px solid rgba(255,255,255,0.05);
+}
+
+.top-navbar a:hover{
+background:rgba(56,189,248,0.15);
+color:#38bdf8;
+
+border-color:rgba(56,189,248,0.4);
+
+transform:translateY(-2px);
+}
+
+.top-navbar i{
+font-size:14px;
+}
+
+/* ===== CONTAINER ===== */
+.container{
+width:100%;
+max-width:1200px;
+margin:auto;
+padding:35px 15px;
+}
+
+/* ===== HERO ===== */
+.hero{
+text-align:center;
+margin-bottom:35px;
+}
+
+.hero h1{
+font-size:48px;
+color:#38bdf8;
+
+margin-bottom:12px;
+
+text-shadow:0 0 15px rgba(56,189,248,0.5);
+}
+
+.hero p{
+max-width:850px;
+margin:auto;
+
+color:#cbd5e1;
+font-size:17px;
+}
+
+/* ===== CONTACT BOX ===== */
+.contact-box{
+background:rgba(30,41,59,0.75);
+backdrop-filter:blur(10px);
+
+padding:28px;
+border-radius:22px;
+
+margin-bottom:22px;
+
+border:1px solid rgba(255,255,255,0.08);
+
+transition:.3s;
+}
+
+.contact-box:hover{
+transform:translateY(-4px);
+
+border-color:#38bdf8;
+
+box-shadow:0 10px 30px rgba(0,0,0,0.25);
+}
+
+.contact-box h2{
+color:#38bdf8;
+font-size:28px;
+margin-bottom:14px;
+}
+
+.contact-box p{
+font-size:15px;
+color:#cbd5e1;
+line-height:1.9;
+margin-bottom:14px;
+}
+
+/* ===== CONTACT INFO ===== */
+.contact-info{
+display:flex;
+flex-direction:column;
+gap:16px;
+margin-top:15px;
+}
+
+.contact-item{
+display:flex;
+align-items:center;
+gap:14px;
+
+background:rgba(255,255,255,0.03);
+
+padding:16px;
+border-radius:16px;
+
+border:1px solid rgba(255,255,255,0.05);
+
+transition:.3s;
+}
+
+.contact-item:hover{
+background:rgba(56,189,248,0.12);
+border-color:rgba(56,189,248,0.3);
+}
+
+.contact-item i{
+font-size:20px;
+color:#38bdf8;
+}
+
+.contact-item span,
+.contact-item a{
+color:#e2e8f0;
+text-decoration:none;
+font-size:15px;
+word-break:break-word;
+}
+
+/* ===== FOOTER ===== */
+footer{
+text-align:center;
+
+padding:30px 15px;
+
+margin-top:50px;
+
+background:rgba(17,24,39,0.85);
+backdrop-filter:blur(10px);
+
+color:#94a3b8;
+
+border-top:1px solid rgba(255,255,255,0.08);
+}
+
+footer p{
+margin-bottom:5px;
+}
+
+/* ===== TABLET ===== */
+@media(max-width:900px){
+
+.hero h1{
+font-size:40px;
+}
+
+.contact-box{
+padding:24px;
+}
+
+.contact-box h2{
+font-size:24px;
+}
+
+}
+
+/* ===== MOBILE ===== */
+@media(max-width:768px){
+
+.logo{
+font-size:32px;
+}
+
+.hero h1{
+font-size:34px;
+}
+
+.hero p{
+font-size:15px;
+}
+
+.contact-box{
+padding:20px;
+border-radius:18px;
+}
+
+.contact-box h2{
+font-size:22px;
+}
+
+.contact-box p{
+font-size:14px;
+}
+
+.contact-item{
+padding:14px;
+}
+
+.top-navbar{
+gap:10px;
+}
+
+.top-navbar a{
+padding:10px 15px;
+font-size:14px;
+}
+
+}
+
+/* ===== SMALL MOBILE ===== */
+@media(max-width:480px){
+
+.logo{
+font-size:28px;
+}
+
+.hero h1{
+font-size:28px;
+}
+
+.hero p{
+font-size:14px;
+}
+
+.contact-box{
+padding:18px;
+border-radius:16px;
+}
+
+.contact-box h2{
+font-size:20px;
+}
+
+.contact-box p{
+font-size:13px;
+}
+
+.contact-item{
+padding:13px;
+border-radius:14px;
+}
+
+.contact-item span,
+.contact-item a{
+font-size:13px;
+}
+
+.top-navbar a{
+font-size:13px;
+padding:9px 13px;
+border-radius:12px;
+}
+
+footer{
+font-size:14px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ===== HEADER ===== -->
+<header>
+
+<div class="logo">Maya Hub</div>
+
+<div class="sub-text">
+Freelancer Marketplace System
+</div>
+
+<nav class="top-navbar">
+
+<a href="index.html">
+<i class="fa-solid fa-house"></i> Home
+</a>
+
+<a href="about.html">
+<i class="fa-solid fa-circle-info"></i> About
+</a>
+
+<a href="privacy-policy.html">
+<i class="fa-solid fa-shield-halved"></i> Privacy
+</a>
+
+<a href="terms.html">
+<i class="fa-solid fa-file-contract"></i> Terms
+</a>
+
+<a href="contact.html">
+<i class="fa-solid fa-envelope"></i> Contact
+</a>
+
+<a href="faq.html">
+<i class="fa-solid fa-circle-question"></i> FAQ
+</a>
+
+</nav>
+
+</header>
+
+<!-- ===== CONTAINER ===== -->
+<div class="container">
+
+<!-- HERO -->
+<div class="hero">
+
+<h1>Contact Maya Hub</h1>
+
+<p>
+Feel free to contact Maya Hub for freelancer opportunities, partnerships, support, or general inquiries.
+</p>
+
+</div>
+
+<!-- CONTACT BOX -->
+<div class="contact-box">
+
+<h2>Get In Touch</h2>
+
+<p>
+We are always open to communication and collaboration. You can contact us through the following methods.
+</p>
+
+<div class="contact-info">
+
+<div class="contact-item">
+
+<i class="fa-solid fa-envelope"></i>
+
+<span>
+mahbubalombd2006@gmail.com
+</span>
+
+</div>
+
+<div class="contact-item">
+
+<i class="fa-brands fa-linkedin"></i>
+
+<a href="https://www.linkedin.com/in/mahbubalombd2006/"
+target="_blank">
+
+LinkedIn Profile
+
+</a>
+
+</div>
+
+<div class="contact-item">
+
+<i class="fa-solid fa-globe"></i>
+
+<span>
+https://mayahub.netlify.app/
+</span>
+
+</div>
+
+<div class="contact-item">
+
+<i class="fa-solid fa-location-dot"></i>
+
+<span>
+Sylhet, Bangladesh
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- CONTACT BOX -->
+<div class="contact-box">
+
+<h2>Business & Support</h2>
+
+<p>
+For business partnerships, website support, freelancer collaborations, or advertising inquiries, please contact us anytime. We aim to respond as quickly as possible.
+</p>
+
+</div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+
+<p>© 2026 Maya Hub • All Rights Reserved</p>
+
+<p>
+Made with ❤️ by Maya Hub
+</p>
+
+</footer>
+
+</body>
+</html>
