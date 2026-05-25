@@ -92,19 +92,24 @@ background:#2563eb;
 color:white;
 }
 
-/* ===== TERMS CARDS ===== */
+/* ===== GRID ===== */
 .container{
-max-width:900px;
+width:100%;
+max-width:1200px;
 margin:12px auto;
 padding:0 10px;
 flex:1;
+
+display:grid;
+grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
+gap:12px;
 }
 
+/* ===== CARD ===== */
 .card{
 background:rgba(255,255,255,0.95);
 padding:16px;
 border-radius:18px;
-margin-bottom:12px;
 border:1px solid rgba(15,23,42,0.06);
 box-shadow:0 6px 18px rgba(0,0,0,0.05);
 transition:.2s;
@@ -118,9 +123,6 @@ transform:translateY(-3px);
 color:#1d4ed8;
 font-size:15px;
 margin-bottom:8px;
-display:flex;
-gap:8px;
-align-items:center;
 }
 
 .card p{
@@ -129,7 +131,6 @@ font-size:14px;
 line-height:1.7;
 }
 
-/* badge */
 .badge{
 display:inline-block;
 margin-top:10px;
@@ -175,53 +176,48 @@ Maya Hub
 </div>
 </header>
 
-<!-- TERMS CONTENT -->
+<!-- TERMS (20 CARDS) -->
 <div class="container">
 
-<!-- CARD 1 -->
-<div class="card">
-<h3><i class="fa-solid fa-file-contract"></i> Acceptance of Terms</h3>
-<p>
-By using Maya Hub, you agree to follow all rules, guidelines, and policies of our platform. If you do not agree, please do not use our service.
-</p>
-<span class="badge">Legal</span>
-</div>
+<div class="card"><h3>📜 Acceptance of Terms</h3><p>By using Maya Hub, you agree to follow all rules and policies.</p><span class="badge">Legal</span></div>
 
-<!-- CARD 2 -->
-<div class="card">
-<h3><i class="fa-solid fa-user-shield"></i> User Responsibility</h3>
-<p>
-Users are responsible for their own profiles, content, and communication. Any misuse or false information may result in account restriction.
-</p>
-<span class="badge">Rules</span>
-</div>
+<div class="card"><h3>👤 User Responsibility</h3><p>Users are responsible for their profile, content, and activity.</p><span class="badge">Rules</span></div>
 
-<!-- CARD 3 -->
-<div class="card">
-<h3><i class="fa-solid fa-handshake"></i> Freelancer & Client Interaction</h3>
-<p>
-All communication between freelancers and clients must be respectful and professional. We are not responsible for external agreements.
-</p>
-<span class="badge">Policy</span>
-</div>
+<div class="card"><h3>💼 Freelancer Rules</h3><p>Freelancers must provide accurate skills and information.</p><span class="badge">Work</span></div>
 
-<!-- CARD 4 -->
-<div class="card">
-<h3><i class="fa-solid fa-shield-halved"></i> Privacy & Safety</h3>
-<p>
-We aim to keep user data safe, but users should also avoid sharing sensitive personal or financial information publicly.
-</p>
-<span class="badge">Security</span>
-</div>
+<div class="card"><h3>🤝 Client Rules</h3><p>Clients must behave respectfully with freelancers.</p><span class="badge">Client</span></div>
 
-<!-- CARD 5 -->
-<div class="card">
-<h3><i class="fa-solid fa-ban"></i> Account Termination</h3>
-<p>
-We reserve the right to suspend or delete accounts that violate rules, spam, or misuse the platform.
-</p>
-<span class="badge">Enforcement</span>
-</div>
+<div class="card"><h3>🚫 Misuse</h3><p>Any spam, fake activity or abuse is strictly prohibited.</p><span class="badge">Ban</span></div>
+
+<div class="card"><h3>🔐 Account Safety</h3><p>Users must keep their login information secure.</p><span class="badge">Security</span></div>
+
+<div class="card"><h3>📢 Platform Usage</h3><p>Maya Hub should only be used for freelancing purposes.</p><span class="badge">Usage</span></div>
+
+<div class="card"><h3>💰 Payments</h3><p>All payments between users are their own responsibility.</p><span class="badge">Money</span></div>
+
+<div class="card"><h3>⚠️ Risk</h3><p>We are not responsible for external user agreements.</p><span class="badge">Risk</span></div>
+
+<div class="card"><h3>📵 Prohibited Content</h3><p>No illegal or harmful content is allowed.</p><span class="badge">Policy</span></div>
+
+<div class="card"><h3>🌍 Global Access</h3><p>Users from all countries can use Maya Hub.</p><span class="badge">Global</span></div>
+
+<div class="card"><h3>📱 Device Use</h3><p>Platform works on mobile and desktop devices.</p><span class="badge">Device</span></div>
+
+<div class="card"><h3>⚙️ System Changes</h3><p>We can update features anytime without notice.</p><span class="badge">Update</span></div>
+
+<div class="card"><h3>🧾 Legal Compliance</h3><p>Users must follow applicable laws while using platform.</p><span class="badge">Law</span></div>
+
+<div class="card"><h3>📦 Data Use</h3><p>Basic data is used to improve services.</p><span class="badge">Data</span></div>
+
+<div class="card"><h3>🔁 Refund Policy</h3><p>No direct refunds between users are handled by us.</p><span class="badge">Refund</span></div>
+
+<div class="card"><h3>🚪 Account Termination</h3><p>We can suspend accounts for rule violation.</p><span class="badge">Close</span></div>
+
+<div class="card"><h3>📊 Monitoring</h3><p>We may monitor activity for safety purposes.</p><span class="badge">Monitor</span></div>
+
+<div class="card"><h3>🧑‍⚖️ Disputes</h3><p>Disputes between users must be handled personally.</p><span class="badge">Issue</span></div>
+
+<div class="card"><h3>🏁 Final Agreement</h3><p>Using Maya Hub means you accept all terms above.</p><span class="badge">Agree</span></div>
 
 </div>
 

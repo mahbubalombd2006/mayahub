@@ -92,19 +92,24 @@ background:#2563eb;
 color:white;
 }
 
-/* ===== POLICY CARDS ===== */
+/* ===== GRID ===== */
 .container{
-max-width:900px;
+width:100%;
+max-width:1200px;
 margin:12px auto;
 padding:0 10px;
 flex:1;
+
+display:grid;
+grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
+gap:12px;
 }
 
+/* ===== CARD ===== */
 .card{
 background:rgba(255,255,255,0.95);
 padding:16px;
 border-radius:18px;
-margin-bottom:12px;
 border:1px solid rgba(15,23,42,0.06);
 box-shadow:0 6px 18px rgba(0,0,0,0.05);
 transition:.2s;
@@ -118,9 +123,6 @@ transform:translateY(-3px);
 color:#1d4ed8;
 font-size:15px;
 margin-bottom:8px;
-display:flex;
-gap:8px;
-align-items:center;
 }
 
 .card p{
@@ -129,7 +131,6 @@ font-size:14px;
 line-height:1.7;
 }
 
-/* badge */
 .badge{
 display:inline-block;
 margin-top:10px;
@@ -175,53 +176,48 @@ Maya Hub
 </div>
 </header>
 
-<!-- PRIVACY CONTENT -->
+<!-- PRIVACY POLICY (20 CARDS) -->
 <div class="container">
 
-<!-- CARD 1 -->
-<div class="card">
-<h3><i class="fa-solid fa-lock"></i> Information We Collect</h3>
-<p>
-We may collect basic information such as name, email address, and profile details when users register or contact us.
-</p>
-<span class="badge">Data Collection</span>
-</div>
+<div class="card"><h3>🔐 Data Collection</h3><p>We collect basic user information like name, email, and profile data.</p><span class="badge">Data</span></div>
 
-<!-- CARD 2 -->
-<div class="card">
-<h3><i class="fa-solid fa-shield-halved"></i> How We Use Data</h3>
-<p>
-Your information is used to improve user experience, connect freelancers with clients, and maintain platform security.
-</p>
-<span class="badge">Usage</span>
-</div>
+<div class="card"><h3>📊 Usage of Data</h3><p>Data is used to improve platform experience and connect users.</p><span class="badge">Usage</span></div>
 
-<!-- CARD 3 -->
-<div class="card">
-<h3><i class="fa-solid fa-user-lock"></i> Data Protection</h3>
-<p>
-We take reasonable measures to protect your data. However, no system is 100% secure, so users should be careful online.
-</p>
-<span class="badge">Security</span>
-</div>
+<div class="card"><h3>🛡️ Data Protection</h3><p>We apply basic security measures to protect user information.</p><span class="badge">Security</span></div>
 
-<!-- CARD 4 -->
-<div class="card">
-<h3><i class="fa-solid fa-share-nodes"></i> Third-Party Sharing</h3>
-<p>
-We do not sell your personal data. Some information may be shared with trusted services only when necessary for platform operation.
-</p>
-<span class="badge">Privacy</span>
-</div>
+<div class="card"><h3>🚫 No Selling Data</h3><p>We do not sell user personal information to third parties.</p><span class="badge">Privacy</span></div>
 
-<!-- CARD 5 -->
-<div class="card">
-<h3><i class="fa-solid fa-cookie-bite"></i> Cookies</h3>
-<p>
-Maya Hub may use cookies to improve user experience and analyze platform performance.
-</p>
-<span class="badge">Cookies</span>
-</div>
+<div class="card"><h3>🍪 Cookies</h3><p>We may use cookies to improve user experience and performance.</p><span class="badge">Cookies</span></div>
+
+<div class="card"><h3>👤 User Control</h3><p>Users can manage or update their profile anytime.</p><span class="badge">Control</span></div>
+
+<div class="card"><h3>📨 Communication</h3><p>We may contact users for updates or support messages.</p><span class="badge">Contact</span></div>
+
+<div class="card"><h3>⚠️ Safety</h3><p>Users must avoid sharing sensitive private information publicly.</p><span class="badge">Safety</span></div>
+
+<div class="card"><h3>🌍 Third Party</h3><p>We may use third-party tools for platform improvement.</p><span class="badge">External</span></div>
+
+<div class="card"><h3>🔑 Account Security</h3><p>Users are responsible for keeping their account safe.</p><span class="badge">Account</span></div>
+
+<div class="card"><h3>📱 Device Info</h3><p>We may collect device data for analytics purposes.</p><span class="badge">Device</span></div>
+
+<div class="card"><h3>📈 Analytics</h3><p>We analyze usage to improve platform performance.</p><span class="badge">Stats</span></div>
+
+<div class="card"><h3>🚀 Improvement</h3><p>Data helps us improve features and UI experience.</p><span class="badge">Upgrade</span></div>
+
+<div class="card"><h3>🤝 Sharing Rules</h3><p>We only share data when necessary for service operation.</p><span class="badge">Rules</span></div>
+
+<div class="card"><h3>🧾 Legal Compliance</h3><p>We follow basic legal and privacy standards.</p><span class="badge">Legal</span></div>
+
+<div class="card"><h3>📦 Storage</h3><p>We store data securely in protected systems.</p><span class="badge">Storage</span></div>
+
+<div class="card"><h3>⏳ Data Retention</h3><p>Data is kept only as long as necessary.</p><span class="badge">Time</span></div>
+
+<div class="card"><h3>🚪 Account Delete</h3><p>Users can request account deletion anytime.</p><span class="badge">Delete</span></div>
+
+<div class="card"><h3>📢 Updates</h3><p>We may update privacy policy anytime.</p><span class="badge">Update</span></div>
+
+<div class="card"><h3>🏁 Final Note</h3><p>By using Maya Hub, you agree to this privacy policy.</p><span class="badge">Agree</span></div>
 
 </div>
 

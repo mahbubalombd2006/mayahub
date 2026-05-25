@@ -92,19 +92,24 @@ background:#2563eb;
 color:white;
 }
 
-/* ===== ABOUT CARDS ===== */
+/* ===== FULL WIDTH GRID ===== */
 .container{
-max-width:900px;
+width:100%;
+max-width:1200px;
 margin:12px auto;
 padding:0 10px;
 flex:1;
+
+display:grid;
+grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
+gap:12px;
 }
 
+/* ===== CARD ===== */
 .card{
 background:rgba(255,255,255,0.95);
 padding:16px;
 border-radius:18px;
-margin-bottom:12px;
 border:1px solid rgba(15,23,42,0.06);
 box-shadow:0 6px 18px rgba(0,0,0,0.05);
 transition:.2s;
@@ -116,7 +121,7 @@ transform:translateY(-3px);
 
 .card h3{
 color:#1d4ed8;
-font-size:16px;
+font-size:15px;
 margin-bottom:8px;
 }
 
@@ -126,10 +131,9 @@ font-size:14px;
 line-height:1.7;
 }
 
-/* highlight */
 .badge{
 display:inline-block;
-margin-top:8px;
+margin-top:10px;
 padding:4px 10px;
 border-radius:10px;
 background:#eef2ff;
@@ -172,44 +176,48 @@ Maya Hub
 </div>
 </header>
 
-<!-- ABOUT CONTENT -->
+<!-- ABOUT CONTENT (20 CARDS) -->
 <div class="container">
 
-<!-- CARD 1 -->
-<div class="card">
-<h3>🚀 What is Maya Hub?</h3>
-<p>
-Maya Hub is a freelancer marketplace where clients can easily find skilled professionals like web developers, designers, SEO experts, and content writers.
-</p>
-<span class="badge">Freelancer Platform</span>
-</div>
+<div class="card"><h3>🚀 What is Maya Hub?</h3><p>Freelancer marketplace connecting clients with professionals.</p><span class="badge">Platform</span></div>
 
-<!-- CARD 2 -->
-<div class="card">
-<h3>🎯 Our Mission</h3>
-<p>
-Our mission is to connect talented freelancers with clients worldwide and make hiring simple, fast, and secure for everyone.
-</p>
-<span class="badge">Trusted Platform</span>
-</div>
+<div class="card"><h3>🎯 Mission</h3><p>Make freelancing simple, fast and secure worldwide.</p><span class="badge">Goal</span></div>
 
-<!-- CARD 3 -->
-<div class="card">
-<h3>💼 What We Offer</h3>
-<p>
-We offer a simple system where freelancers can create profiles, showcase skills, and clients can directly contact them for work opportunities.
-</p>
-<span class="badge">Easy Hiring</span>
-</div>
+<div class="card"><h3>💼 Services</h3><p>Web development, design, SEO, writing, marketing services.</p><span class="badge">Work</span></div>
 
-<!-- CARD 4 -->
-<div class="card">
-<h3>⚡ Why Choose Us?</h3>
-<p>
-Fast performance, clean UI, mobile friendly design, and easy navigation make Maya Hub a modern solution for freelancing needs.
-</p>
-<span class="badge">Modern UI</span>
-</div>
+<div class="card"><h3>⚡ Why Choose Us</h3><p>Fast, clean UI, mobile friendly design.</p><span class="badge">UI</span></div>
+
+<div class="card"><h3>🌍 Global Access</h3><p>Freelancers and clients from anywhere can join.</p><span class="badge">Global</span></div>
+
+<div class="card"><h3>🔐 Security</h3><p>Safe platform with basic protection system.</p><span class="badge">Safe</span></div>
+
+<div class="card"><h3>📱 Mobile Friendly</h3><p>Works perfectly on all devices.</p><span class="badge">Responsive</span></div>
+
+<div class="card"><h3>⚙️ Easy System</h3><p>Simple hiring and profile system.</p><span class="badge">Easy</span></div>
+
+<div class="card"><h3>👨‍💻 Developers</h3><p>Find web & app developers easily.</p><span class="badge">Tech</span></div>
+
+<div class="card"><h3>🎨 Designers</h3><p>UI/UX and graphic designers available.</p><span class="badge">Design</span></div>
+
+<div class="card"><h3>📈 SEO Experts</h3><p>Improve ranking with SEO experts.</p><span class="badge">SEO</span></div>
+
+<div class="card"><h3>✍️ Writers</h3><p>Content writers for blogs & marketing.</p><span class="badge">Content</span></div>
+
+<div class="card"><h3>💬 Communication</h3><p>Direct contact between users.</p><span class="badge">Chat</span></div>
+
+<div class="card"><h3>🚀 Growth</h3><p>Helping freelancers grow career.</p><span class="badge">Growth</span></div>
+
+<div class="card"><h3>💡 Innovation</h3><p>Modern tools and updates.</p><span class="badge">Idea</span></div>
+
+<div class="card"><h3>🤝 Trust</h3><p>We focus on user trust.</p><span class="badge">Trust</span></div>
+
+<div class="card"><h3>📊 Performance</h3><p>Fast and optimized system.</p><span class="badge">Speed</span></div>
+
+<div class="card"><h3>🧑‍💼 Freelancers</h3><p>Create profile and showcase skills.</p><span class="badge">Profile</span></div>
+
+<div class="card"><h3>💰 Opportunities</h3><p>Real freelance job opportunities.</p><span class="badge">Jobs</span></div>
+
+<div class="card"><h3>🏁 Future Vision</h3><p>Building a global freelancer ecosystem.</p><span class="badge">Future</span></div>
 
 </div>
 

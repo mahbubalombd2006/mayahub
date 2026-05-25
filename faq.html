@@ -92,19 +92,24 @@ background:#2563eb;
 color:white;
 }
 
-/* ===== FAQ CARDS ===== */
+/* ===== GRID ===== */
 .container{
-max-width:900px;
+width:100%;
+max-width:1200px;
 margin:12px auto;
 padding:0 10px;
 flex:1;
+
+display:grid;
+grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
+gap:12px;
 }
 
+/* ===== CARD ===== */
 .card{
 background:rgba(255,255,255,0.95);
 padding:16px;
 border-radius:18px;
-margin-bottom:12px;
 border:1px solid rgba(15,23,42,0.06);
 box-shadow:0 6px 18px rgba(0,0,0,0.05);
 transition:.2s;
@@ -129,7 +134,6 @@ font-size:14px;
 line-height:1.7;
 }
 
-/* badge */
 .badge{
 display:inline-block;
 margin-top:10px;
@@ -175,53 +179,48 @@ Maya Hub
 </div>
 </header>
 
-<!-- FAQ CONTENT -->
+<!-- FAQ (20 CARDS) -->
 <div class="container">
 
-<!-- FAQ 1 -->
-<div class="card">
-<h3><i class="fa-solid fa-question"></i> What is Maya Hub?</h3>
-<p>
-Maya Hub is a freelancer marketplace where clients can find web developers, designers, SEO experts, and other digital professionals.
-</p>
-<span class="badge">General</span>
-</div>
+<div class="card"><h3>❓ What is Maya Hub?</h3><p>It is a freelancer marketplace for clients and professionals.</p><span class="badge">General</span></div>
 
-<!-- FAQ 2 -->
-<div class="card">
-<h3><i class="fa-solid fa-user"></i> How do I hire a freelancer?</h3>
-<p>
-Just browse freelancer profiles, click “Open”, and contact them directly through available links like LinkedIn or contact form.
-</p>
-<span class="badge">Hiring</span>
-</div>
+<div class="card"><h3>👨‍💻 How do I join?</h3><p>You can simply browse and use the platform without complex signup.</p><span class="badge">Start</span></div>
 
-<!-- FAQ 3 -->
-<div class="card">
-<h3><i class="fa-solid fa-money-check"></i> Is Maya Hub free?</h3>
-<p>
-Yes, Maya Hub is free to use for both clients and freelancers. No hidden charges are applied.
-</p>
-<span class="badge">Pricing</span>
-</div>
+<div class="card"><h3>💼 How to hire freelancer?</h3><p>Click on profile and contact them directly.</p><span class="badge">Hiring</span></div>
 
-<!-- FAQ 4 -->
-<div class="card">
-<h3><i class="fa-solid fa-shield-halved"></i> Is it safe?</h3>
-<p>
-We try to keep the platform safe and clean by listing verified freelancer profiles and easy contact systems.
-</p>
-<span class="badge">Security</span>
-</div>
+<div class="card"><h3>💰 Is it free?</h3><p>Yes, Maya Hub is free to use.</p><span class="badge">Free</span></div>
 
-<!-- FAQ 5 -->
-<div class="card">
-<h3><i class="fa-solid fa-headset"></i> How can I contact support?</h3>
-<p>
-You can go to the contact page and send a message. We will reply as soon as possible.
-</p>
-<span class="badge">Support</span>
-</div>
+<div class="card"><h3>🔐 Is it safe?</h3><p>We provide basic safety and user protection.</p><span class="badge">Safety</span></div>
+
+<div class="card"><h3>📱 Mobile supported?</h3><p>Yes, fully mobile responsive platform.</p><span class="badge">Mobile</span></div>
+
+<div class="card"><h3>🌍 Global use?</h3><p>Users from anywhere can join.</p><span class="badge">Global</span></div>
+
+<div class="card"><h3>👨‍💼 Freelancer types?</h3><p>Developers, designers, writers, SEO experts.</p><span class="badge">Skills</span></div>
+
+<div class="card"><h3>🎨 Designers available?</h3><p>Yes, UI/UX and graphic designers available.</p><span class="badge">Design</span></div>
+
+<div class="card"><h3>📈 SEO experts?</h3><p>Yes, SEO professionals are listed.</p><span class="badge">SEO</span></div>
+
+<div class="card"><h3>✍️ Writers?</h3><p>Content writers are available.</p><span class="badge">Content</span></div>
+
+<div class="card"><h3>💬 Contact method?</h3><p>Use LinkedIn or contact page.</p><span class="badge">Contact</span></div>
+
+<div class="card"><h3>⚙️ How it works?</h3><p>Browse → Open profile → Contact freelancer.</p><span class="badge">Process</span></div>
+
+<div class="card"><h3>🚀 Fast system?</h3><p>Yes, optimized for fast loading.</p><span class="badge">Speed</span></div>
+
+<div class="card"><h3>🤝 Trust?</h3><p>We focus on safe and trusted connection.</p><span class="badge">Trust</span></div>
+
+<div class="card"><h3>📊 Profile system?</h3><p>Each freelancer has profile card.</p><span class="badge">Profile</span></div>
+
+<div class="card"><h3>💡 Updates?</h3><p>We update features regularly.</p><span class="badge">Update</span></div>
+
+<div class="card"><h3>🧑‍💻 Jobs?</h3><p>Freelancers can get job opportunities.</p><span class="badge">Jobs</span></div>
+
+<div class="card"><h3>📦 Data safe?</h3><p>We keep basic user data secure.</p><span class="badge">Data</span></div>
+
+<div class="card"><h3>🏁 Final?</h3><p>Maya Hub is simple and easy freelance platform.</p><span class="badge">End</span></div>
 
 </div>
 
