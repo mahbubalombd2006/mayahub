@@ -6,11 +6,7 @@
 
 <title>FAQ - Maya Hub</title>
 
-<meta name="description" content="Frequently Asked Questions about Maya Hub freelancer marketplace platform.">
-
-<meta name="keywords" content="FAQ, Maya Hub, freelancer marketplace">
-
-<meta name="author" content="Maya Hub">
+<meta name="description" content="Frequently Asked Questions about Maya Hub freelancer marketplace.">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
@@ -26,247 +22,303 @@ box-sizing:border-box;
 font-family:'Poppins',sans-serif;
 }
 
-html{
-scroll-behavior:smooth;
-}
-
 body{
 background:
-linear-gradient(rgba(15,23,42,0.78), rgba(15,23,42,0.82)),
-url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2070&auto=format&fit=crop');
+linear-gradient(
+rgba(248,250,252,0.94),
+rgba(241,245,249,0.96)
+),
+url('https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=2070&auto=format&fit=crop');
 
 background-size:cover;
 background-position:center;
 background-attachment:fixed;
-background-repeat:no-repeat;
 
-color:white;
-line-height:1.8;
+color:#0f172a;
+overflow-x:hidden;
 min-height:100vh;
 }
 
 /* ===== HEADER ===== */
-header{
-background:rgba(17,24,39,0.88);
-backdrop-filter:blur(14px);
-
-padding:18px 15px;
-
+.main-header{
 position:sticky;
 top:0;
 z-index:1000;
 
-box-shadow:0 0 25px rgba(0,0,0,0.35);
+background:rgba(255,255,255,0.95);
+backdrop-filter:blur(14px);
 
-border-bottom:1px solid rgba(255,255,255,0.08);
+border-bottom:1px solid rgba(15,23,42,0.06);
+
+box-shadow:0 2px 12px rgba(0,0,0,0.04);
 }
 
+.header-container{
+width:100%;
+margin:auto;
+
+display:flex;
+align-items:center;
+justify-content:space-between;
+
+gap:.6vw;
+
+padding:.7vw 1vw;
+
+flex-wrap:nowrap;
+
+overflow:hidden;
+}
+
+/* ===== LOGO ===== */
 .logo{
-text-align:center;
-font-size:40px;
+display:flex;
+align-items:center;
+gap:.4vw;
+
+font-size:clamp(12px,1.4vw,24px);
 font-weight:700;
-color:#38bdf8;
 
-letter-spacing:1px;
+color:#2563eb;
 
-text-shadow:0 0 15px rgba(56,189,248,0.35);
+white-space:nowrap;
+
+flex-shrink:0;
 }
 
-.sub-text{
-text-align:center;
-margin-top:6px;
-font-size:15px;
-color:#cbd5e1;
-letter-spacing:.5px;
+.logo i{
+font-size:clamp(10px,1.1vw,20px);
+}
+
+/* ===== SEARCH ===== */
+.search-box{
+flex:1;
+
+display:flex;
+align-items:center;
+gap:.5vw;
+
+background:white;
+
+padding:.6vw .9vw;
+
+border-radius:14px;
+
+border:1px solid rgba(15,23,42,0.08);
+
+box-shadow:0 2px 10px rgba(0,0,0,0.04);
+
+min-width:80px;
+max-width:500px;
+}
+
+.search-box i{
+color:#64748b;
+font-size:clamp(10px,1vw,15px);
+}
+
+.search-box input{
+width:100%;
+
+border:none;
+outline:none;
+background:transparent;
+
+font-size:clamp(9px,1vw,14px);
+
+color:#0f172a;
+}
+
+.search-box input::placeholder{
+color:#94a3b8;
 }
 
 /* ===== NAVBAR ===== */
 .top-navbar{
 display:flex;
-justify-content:center;
 align-items:center;
-flex-wrap:wrap;
-gap:12px;
 
-margin-top:18px;
-padding-top:15px;
+gap:.4vw;
 
-border-top:1px solid rgba(255,255,255,0.08);
+flex-wrap:nowrap;
+
+white-space:nowrap;
 }
 
 .top-navbar a{
-text-decoration:none;
-color:#e2e8f0;
+display:flex;
+justify-content:center;
+align-items:center;
 
-padding:11px 18px;
-border-radius:14px;
+text-decoration:none;
+
+width:clamp(28px,2.5vw,40px);
+height:clamp(28px,2.5vw,40px);
+
+background:white;
+
+color:#334155;
+
+border-radius:12px;
+
+border:1px solid rgba(15,23,42,0.06);
+
+font-size:clamp(10px,.9vw,14px);
 
 transition:.3s;
 
-font-size:15px;
-font-weight:500;
-
-display:flex;
-align-items:center;
-gap:8px;
-
-background:rgba(255,255,255,0.03);
-border:1px solid rgba(255,255,255,0.05);
+flex-shrink:0;
 }
 
 .top-navbar a:hover{
-background:rgba(56,189,248,0.15);
-color:#38bdf8;
-
-border-color:rgba(56,189,248,0.4);
+background:#2563eb;
+color:white;
 
 transform:translateY(-2px);
-}
-
-.top-navbar i{
-font-size:14px;
 }
 
 /* ===== CONTAINER ===== */
 .container{
 width:100%;
-max-width:1100px;
-margin:auto;
-padding:40px 15px;
+padding:45px 15px;
 }
 
-/* ===== PAGE TITLE ===== */
+/* ===== TITLE ===== */
 .page-title{
 text-align:center;
-margin-bottom:35px;
+margin-bottom:40px;
 }
 
 .page-title h1{
-font-size:50px;
-color:#38bdf8;
-margin-bottom:10px;
-text-shadow:0 0 15px rgba(56,189,248,0.5);
+font-size:clamp(32px,3vw,54px);
+color:#2563eb;
+margin-bottom:12px;
 }
 
 .page-title p{
-color:#cbd5e1;
-font-size:16px;
+max-width:900px;
+margin:auto;
+
+font-size:clamp(14px,1vw,18px);
+
+line-height:2;
+color:#64748b;
 }
 
-/* ===== FAQ BOX ===== */
-.faq-box{
-background:rgba(30,41,59,0.78);
-backdrop-filter:blur(10px);
+/* ===== FAQ GRID ===== */
+.faq-grid{
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+gap:24px;
+}
+
+/* ===== FAQ CARD ===== */
+.faq-card{
+background:rgba(255,255,255,0.96);
 
 padding:30px;
-border-radius:24px;
 
-border:1px solid rgba(255,255,255,0.08);
+border-radius:28px;
+
+border:1px solid rgba(15,23,42,0.06);
+
+box-shadow:0 10px 25px rgba(0,0,0,0.05);
+
+transition:.35s;
+
+position:relative;
+
+overflow:hidden;
+}
+
+.faq-card::before{
+content:"";
+
+position:absolute;
+
+top:0;
+left:0;
+
+width:100%;
+height:5px;
+
+background:linear-gradient(to right,#2563eb,#60a5fa);
+}
+
+.faq-card:hover{
+transform:translateY(-7px);
+
+box-shadow:0 18px 35px rgba(37,99,235,0.10);
+}
+
+/* ===== ICON ===== */
+.faq-icon{
+width:68px;
+height:68px;
 
 margin-bottom:22px;
 
-transition:.3s;
+border-radius:20px;
+
+background:rgba(37,99,235,0.1);
+
+display:flex;
+align-items:center;
+justify-content:center;
 }
 
-.faq-box:hover{
-border-color:#38bdf8;
-transform:translateY(-4px);
+.faq-icon i{
+font-size:30px;
+color:#2563eb;
 }
 
-.faq-box h2{
-color:#38bdf8;
-margin-bottom:12px;
-font-size:25px;
+/* ===== TEXT ===== */
+.faq-card h2{
+font-size:23px;
+margin-bottom:14px;
+color:#0f172a;
 }
 
-.faq-box p{
-color:#cbd5e1;
+.faq-card p{
 font-size:15px;
-line-height:1.9;
+line-height:2;
+color:#64748b;
 }
 
 /* ===== FOOTER ===== */
 footer{
 text-align:center;
 
-padding:30px 15px;
+padding:26px 12px;
 
-margin-top:50px;
+margin-top:45px;
 
-background:rgba(17,24,39,0.85);
-backdrop-filter:blur(10px);
+background:rgba(255,255,255,0.94);
 
-color:#94a3b8;
+color:#64748b;
 
-border-top:1px solid rgba(255,255,255,0.08);
-}
+border-top:1px solid rgba(15,23,42,0.06);
 
-footer p{
-margin-bottom:5px;
+font-size:clamp(10px,1vw,14px);
 }
 
 /* ===== MOBILE ===== */
 @media(max-width:768px){
 
-.logo{
-font-size:32px;
+.faq-card{
+padding:24px 20px;
+border-radius:22px;
 }
 
-.page-title h1{
-font-size:38px;
-}
-
-.page-title p{
-font-size:14px;
-}
-
-.faq-box{
-padding:24px;
-border-radius:18px;
-}
-
-.faq-box h2{
-font-size:22px;
-}
-
-.faq-box p{
-font-size:14px;
-}
-
-.top-navbar a{
-font-size:14px;
-padding:10px 15px;
-}
-
-}
-
-/* ===== SMALL MOBILE ===== */
-@media(max-width:480px){
-
-.logo{
-font-size:28px;
-}
-
-.page-title h1{
-font-size:30px;
-}
-
-.faq-box{
-padding:20px;
-border-radius:16px;
-}
-
-.faq-box h2{
+.faq-card h2{
 font-size:20px;
 }
 
-.faq-box p{
-font-size:13px;
-}
-
-.top-navbar a{
-font-size:13px;
-padding:9px 13px;
+.faq-card p{
+font-size:14px;
+line-height:1.9;
 }
 
 }
@@ -277,121 +329,197 @@ padding:9px 13px;
 <body>
 
 <!-- ===== HEADER ===== -->
-<header>
+<header class="main-header">
 
-<div class="logo">Maya Hub</div>
+<div class="header-container">
 
-<div class="sub-text">
-Freelancer Marketplace System
+<!-- LOGO -->
+<div class="logo">
+<i class="fa-solid fa-briefcase"></i>
+Maya Hub
 </div>
 
+<!-- SEARCH -->
+<div class="search-box">
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+<input
+type="text"
+placeholder="Search..."
+>
+
+</div>
+
+<!-- NAVBAR -->
 <nav class="top-navbar">
 
-<a href="index.html">
-<i class="fa-solid fa-house"></i> Home
+<a href="index.html" title="Home">
+<i class="fa-solid fa-house"></i>
 </a>
 
-<a href="about.html">
-<i class="fa-solid fa-circle-info"></i> About
+<a href="about.html" title="About">
+<i class="fa-solid fa-circle-info"></i>
 </a>
 
-<a href="privacy-policy.html">
-<i class="fa-solid fa-shield-halved"></i> Privacy
+<a href="privacy-policy.html" title="Privacy">
+<i class="fa-solid fa-shield-halved"></i>
 </a>
 
-<a href="terms.html">
-<i class="fa-solid fa-file-contract"></i> Terms
+<a href="terms.html" title="Terms">
+<i class="fa-solid fa-file-contract"></i>
 </a>
 
-<a href="contact.html">
-<i class="fa-solid fa-envelope"></i> Contact
+<a href="contact.html" title="Contact">
+<i class="fa-solid fa-envelope"></i>
 </a>
 
-<a href="faq.html">
-<i class="fa-solid fa-circle-question"></i> FAQ
+<a href="faq.html" title="FAQ">
+<i class="fa-solid fa-circle-question"></i>
 </a>
 
 </nav>
+
+</div>
 
 </header>
 
 <!-- ===== CONTAINER ===== -->
 <div class="container">
 
-<!-- ===== PAGE TITLE ===== -->
+<!-- ===== TITLE ===== -->
 <div class="page-title">
 
 <h1>Frequently Asked Questions</h1>
 
 <p>
-Find answers to common questions about Maya Hub and freelancer services.
+Find answers to common questions about Maya Hub, freelancer profiles, services, communication, and platform usage.
 </p>
 
 </div>
 
-<!-- ===== FAQ ===== -->
-<div class="faq-box">
+<!-- ===== FAQ GRID ===== -->
+<div class="faq-grid">
+
+<!-- FAQ -->
+<div class="faq-card">
+
+<div class="faq-icon">
+<i class="fa-solid fa-user"></i>
+</div>
 
 <h2>What is Maya Hub?</h2>
 
 <p>
-Maya Hub is a freelancer marketplace platform where clients can discover talented professionals for web development, design, SEO, and digital services.
+Maya Hub is a freelancer marketplace platform where clients can discover skilled professionals for web development, design, SEO, content writing, branding, marketing, and many other online services.
 </p>
 
 </div>
 
-<!-- ===== FAQ ===== -->
-<div class="faq-box">
+<!-- FAQ -->
+<div class="faq-card">
 
-<h2>How can I hire a freelancer?</h2>
+<div class="faq-icon">
+<i class="fa-solid fa-briefcase"></i>
+</div>
+
+<h2>How can clients hire freelancers?</h2>
 
 <p>
-You can browse freelancer profiles and directly connect with them using their provided contact or LinkedIn profile links.
+Clients can browse freelancer profiles, review their skills and services, and directly connect through linked social profiles or contact information for project discussions and collaboration.
 </p>
 
 </div>
 
-<!-- ===== FAQ ===== -->
-<div class="faq-box">
+<!-- FAQ -->
+<div class="faq-card">
 
-<h2>Is Maya Hub free to use?</h2>
+<div class="faq-icon">
+<i class="fa-solid fa-globe"></i>
+</div>
+
+<h2>Can freelancers from different countries join?</h2>
 
 <p>
-Yes, browsing freelancer profiles and exploring the platform is completely free for users and visitors.
+Yes. Maya Hub is designed as a global freelancer community where professionals from different countries and industries can showcase their services and connect with international clients.
 </p>
 
 </div>
 
-<!-- ===== FAQ ===== -->
-<div class="faq-box">
+<!-- FAQ -->
+<div class="faq-card">
 
-<h2>Do you verify freelancers?</h2>
+<div class="faq-icon">
+<i class="fa-solid fa-shield-halved"></i>
+</div>
+
+<h2>Is Maya Hub secure?</h2>
 
 <p>
-Maya Hub may review profiles before publishing, but clients are encouraged to communicate directly and verify freelancer details independently.
+We focus on creating a trusted and professional environment for freelancers and clients. Users are encouraged to communicate professionally and verify project details before collaboration.
 </p>
 
 </div>
 
-<!-- ===== FAQ ===== -->
-<div class="faq-box">
+<!-- FAQ -->
+<div class="faq-card">
 
-<h2>Can I join as a freelancer?</h2>
+<div class="faq-icon">
+<i class="fa-solid fa-laptop-code"></i>
+</div>
+
+<h2>What services are available?</h2>
 
 <p>
-Yes, freelancers can contact Maya Hub to request profile listing and showcase their professional services on the platform.
+The platform includes services like website development, UI/UX design, graphic design, SEO, content writing, digital marketing, branding, consulting, and many other professional online services.
 </p>
 
 </div>
 
-<!-- ===== FAQ ===== -->
-<div class="faq-box">
+<!-- FAQ -->
+<div class="faq-card">
 
-<h2>How can I contact Maya Hub?</h2>
+<div class="faq-icon">
+<i class="fa-solid fa-circle-check"></i>
+</div>
+
+<h2>How are freelancers featured?</h2>
 
 <p>
-You can visit the Contact page and send us your message or business inquiry directly.
+Freelancers can be featured on Maya Hub by showcasing professional profiles, portfolio links, experience, and service details that help clients understand their expertise and skills.
 </p>
+
+</div>
+
+<!-- FAQ -->
+<div class="faq-card">
+
+<div class="faq-icon">
+<i class="fa-solid fa-envelope"></i>
+</div>
+
+<h2>How can I contact support?</h2>
+
+<p>
+You can visit the Contact page to reach out for support, partnership inquiries, profile assistance, or general questions related to Maya Hub and its services.
+</p>
+
+</div>
+
+<!-- FAQ -->
+<div class="faq-card">
+
+<div class="faq-icon">
+<i class="fa-solid fa-chart-line"></i>
+</div>
+
+<h2>Why choose Maya Hub?</h2>
+
+<p>
+Maya Hub offers a clean, modern, and easy-to-use freelancer marketplace experience where businesses and freelancers can connect efficiently for quality digital services and long-term opportunities.
+</p>
+
+</div>
 
 </div>
 
