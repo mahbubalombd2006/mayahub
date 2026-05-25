@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Maya Hub - Freelancer Marketplace</title>
+
+<meta name="description" content="Maya Hub is a trusted freelancer marketplace where clients can find web developers, designers, SEO experts, writers, and digital professionals.">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+/* ===== BASE ===== */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:
+linear-gradient(
+rgba(248,250,252,0.92),
+rgba(241,245,249,0.95)
+),
+url('https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=2070&auto=format&fit=crop');
+
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+background-repeat:no-repeat;
+
+color:#0f172a;
+line-height:1.8;
+min-height:100vh;
+overflow-x:hidden;
+}
+
+/* ===== HEADER ===== */
+.main-header{
+position:sticky;
+top:0;
+z-index:1000;
+
+background:rgba(255,255,255,0.95);
+backdrop-filter:blur(14px);
+
+border-bottom:1px solid rgba(15,23,42,0.06);
+
+box-shadow:0 2px 12px rgba(0,0,0,0.04);
+}
+
+/* ===== HEADER FLEX ===== */
+.header-container{
+max-width:1400px;
+margin:auto;
+
+display:flex;
+align-items:center;
+justify-content:space-between;
+
+gap:.6vw;
+
+padding:.7vw 1vw;
+
+flex-wrap:nowrap;
+
+overflow:hidden;
+}
+
+/* ===== LOGO ===== */
+.logo{
+display:flex;
+align-items:center;
+gap:.4vw;
+
+font-size:clamp(12px,1.4vw,24px);
+font-weight:700;
+
+color:#2563eb;
+
+white-space:nowrap;
+
+flex-shrink:0;
+}
+
+.logo i{
+font-size:clamp(10px,1.1vw,20px);
+}
+
+/* ===== SEARCH ===== */
+.search-box{
+flex:1;
+
+display:flex;
+align-items:center;
+gap:.5vw;
+
+background:white;
+
+padding:.6vw .9vw;
+
+border-radius:14px;
+
+border:1px solid rgba(15,23,42,0.08);
+
+box-shadow:0 2px 10px rgba(0,0,0,0.04);
+
+min-width:80px;
+max-width:500px;
+}
+
+.search-box i{
+color:#64748b;
+font-size:clamp(10px,1vw,15px);
+}
+
+.search-box input{
+width:100%;
+
+border:none;
+outline:none;
+background:transparent;
+
+font-size:clamp(9px,1vw,14px);
+
+color:#0f172a;
+}
+
+.search-box input::placeholder{
+color:#94a3b8;
+}
+
+/* ===== NAVBAR ===== */
+.top-navbar{
+display:flex;
+align-items:center;
+
+gap:.4vw;
+
+flex-wrap:nowrap;
+
+white-space:nowrap;
+}
+
+.top-navbar a{
+display:flex;
+justify-content:center;
+align-items:center;
+
+text-decoration:none;
+
+width:clamp(28px,2.5vw,40px);
+height:clamp(28px,2.5vw,40px);
+
+background:white;
+
+color:#334155;
+
+border-radius:12px;
+
+border:1px solid rgba(15,23,42,0.06);
+
+font-size:clamp(10px,.9vw,14px);
+
+transition:.3s;
+
+flex-shrink:0;
+}
+
+.top-navbar a:hover{
+background:#2563eb;
+color:white;
+
+transform:translateY(-2px);
+}
+
+.top-navbar i{
+font-size:clamp(10px,.9vw,14px);
+}
+
+/* ===== CONTAINER ===== */
+.container{
+width:100%;
+max-width:1400px;
+margin:auto;
+
+padding:20px 14px;
+}
+
+/* ===== NOTICE ===== */
+.notice{
+width:100%;
+
+background:rgba(255,255,255,0.9);
+
+padding:16px;
+
+border-radius:18px;
+
+margin-bottom:20px;
+
+text-align:center;
+
+color:#334155;
+
+border:1px solid rgba(37,99,235,0.1);
+
+font-size:clamp(11px,1vw,15px);
+
+box-shadow:0 4px 18px rgba(0,0,0,0.04);
+}
+
+/* ===== CARD ===== */
+.card{
+width:100%;
+
+background:rgba(255,255,255,0.94);
+
+padding:22px;
+
+border-radius:22px;
+
+margin-bottom:20px;
+
+border:1px solid rgba(15,23,42,0.06);
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+gap:18px;
+
+transition:.3s;
+
+box-shadow:0 8px 24px rgba(0,0,0,0.05);
+}
+
+.card:hover{
+transform:translateY(-4px);
+
+border-color:#60a5fa;
+}
+
+/* ===== LEFT ===== */
+.card-left{
+flex:1;
+min-width:0;
+}
+
+.card h3{
+color:#1d4ed8;
+
+margin-bottom:6px;
+
+font-size:clamp(16px,1.8vw,28px);
+
+word-break:break-word;
+}
+
+.card p{
+color:#334155;
+
+font-size:clamp(11px,1vw,16px);
+
+line-height:1.7;
+}
+
+.desc{
+display:block;
+
+margin-top:8px;
+
+font-size:clamp(10px,.95vw,14px);
+
+color:#64748b;
+
+line-height:1.7;
+}
+
+/* ===== RIGHT ===== */
+.card-right{
+display:flex;
+align-items:center;
+
+gap:10px;
+
+flex-wrap:nowrap;
+}
+
+/* ===== LINKEDIN ===== */
+.linkedin-icon{
+background:#0a66c2;
+color:white;
+
+width:clamp(36px,3vw,52px);
+height:clamp(36px,3vw,52px);
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+border-radius:50%;
+
+text-decoration:none;
+
+font-size:clamp(14px,1.2vw,22px);
+
+transition:.3s;
+
+flex-shrink:0;
+}
+
+.linkedin-icon:hover{
+transform:scale(1.08);
+}
+
+/* ===== BUTTON ===== */
+.open-btn{
+background:#2563eb;
+color:white;
+
+padding:.7vw 1vw;
+
+border-radius:12px;
+
+text-decoration:none;
+
+font-size:clamp(10px,1vw,14px);
+
+font-weight:600;
+
+white-space:nowrap;
+}
+
+.open-btn:hover{
+background:#1d4ed8;
+}
+
+/* ===== FOOTER ===== */
+footer{
+text-align:center;
+
+padding:24px 12px;
+
+margin-top:40px;
+
+background:rgba(255,255,255,0.92);
+
+color:#64748b;
+
+border-top:1px solid rgba(15,23,42,0.06);
+
+font-size:clamp(10px,1vw,14px);
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="main-header">
+
+<div class="header-container">
+
+<!-- LOGO -->
+<div class="logo">
+<i class="fa-solid fa-briefcase"></i>
+Maya Hub
+</div>
+
+<!-- SEARCH -->
+<div class="search-box">
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+<input
+type="text"
+id="searchInput"
+placeholder="Search freelancers..."
+>
+
+</div>
+
+<!-- NAVBAR -->
+<nav class="top-navbar">
+
+<a href="index.html" title="Home">
+<i class="fa-solid fa-house"></i>
+</a>
+
+<a href="about.html" title="About">
+<i class="fa-solid fa-circle-info"></i>
+</a>
+
+<a href="privacy-policy.html" title="Privacy">
+<i class="fa-solid fa-shield-halved"></i>
+</a>
+
+<a href="terms.html" title="Terms">
+<i class="fa-solid fa-file-contract"></i>
+</a>
+
+<a href="contact.html" title="Contact">
+<i class="fa-solid fa-envelope"></i>
+</a>
+
+<a href="faq.html" title="FAQ">
+<i class="fa-solid fa-circle-question"></i>
+</a>
+
+</nav>
+
+</div>
+
+</header>
+
+<!-- ===== CONTAINER ===== -->
+<div class="container">
+
+<!-- NOTICE -->
+<div class="notice">
+
+📢 New freelancer profiles are added regularly. Clients can directly connect for professional work opportunities.
+
+</div>
+
+<!-- CARD -->
+<div class="card">
+
+<div class="card-left">
+
+<h3>⭐ Mahbub Alom</h3>
+
+<p>
+Web Developer • Freelancer
+</p>
+
+<span class="desc">
+Professional responsive website developer and freelancer with modern UI experience.
+</span>
+
+</div>
+
+<div class="card-right">
+
+<a class="linkedin-icon"
+href="https://bd.linkedin.com/in/mahbubalombd2006"
+target="_blank">
+
+<i class="fa-brands fa-linkedin"></i>
+
+</a>
+
+<a class="open-btn"
+href="https://bd.linkedin.com/in/mahbubalombd2006"
+target="_blank">
+
+Open
+
+</a>
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- ===== CARD ===== -->
+<div class="card">
+
+<div class="card-left">
+
+<h3>Sajawal Farooq</h3>
+
+<p>
+Founder & CEO at Elenkify
+</p>
+
+<span class="desc">
+Founder & CEO at Elenkify | Building innovative digital solutions & helping businesses grow online.
+</span>
+
+</div>
+
+<div class="card-right">
+
+<a class="linkedin-icon" href="https://www.linkedin.com/in/sajawalfarooq01/">
+
+<i class="fa-brands fa-linkedin"></i>
+
+</a>
+
+<a class="open-btn" href="https://www.linkedin.com/in/sajawalfarooq01/">
+
+Open
+
+</a>
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+<!-- ===== CARD ===== -->
+<div class="card">
+
+<div class="card-left">
+
+<h3>MUHAMMAD UZAIR KHAN</h3>
+
+<p>
+Graphic Designer
+</p>
+
+<span class="desc">
+Creative logo, banner, social media post, business card & professional design services to make your brand stand out. Ready to work with clients worldwide.
+</span>
+
+</div>
+
+<div class="card-right">
+
+<a class="linkedin-icon" href="https://www.linkedin.com/in/uzairkreatives/">
+
+<i class="fa-brands fa-linkedin"></i>
+
+</a>
+
+<a class="open-btn" href="https://www.linkedin.com/in/uzairkreatives/">
+
+Open
+
+</a>
+
+</div>
+
+</div>
+
+
+<!-- ===== CARD ===== -->
+<div class="card">
+
+<div class="card-left">
+
+<h3>Javaria Mehdi</h3>
+
+<p>
+SEO Content Writer
+</p>
+
+<span class="desc">
+SEO Content Writer | SEO Blogs, Articles & Copy for Beauty, SaaS & More.
+</span>
+
+</div>
+
+<div class="card-right">
+
+<a class="linkedin-icon" href="https://www.linkedin.com/in/javaria-mehdi/">
+
+<i class="fa-brands fa-linkedin"></i>
+
+</a>
+
+<a class="open-btn" href="https://www.linkedin.com/in/javaria-mehdi/">
+
+Open
+
+</a>
+
+</div>
+
+</div>
+
+
+<!-- ===== CARD ===== -->
+<div class="card">
+
+<div class="card-left">
+
+<h3>Jahangir Hussain</h3>
+
+<p>
+UI/UX Designer
+</p>
+
+<span class="desc">
+Creative UI/UX Designer for modern web & mobile interfaces.
+</span>
+
+</div>
+
+<div class="card-right">
+
+<a class="linkedin-icon" href="https://www.linkedin.com/in/jahangirux/">
+
+<i class="fa-brands fa-linkedin"></i>
+
+</a>
+
+<a class="open-btn" href="https://www.linkedin.com/in/jahangirux/">
+
+Open
+
+</a>
+
+</div>
+
+</div>
+
+
+<!-- ===== CARD ===== -->
+<div class="card">
+
+<div class="card-left">
+
+<h3>Tehreem Riaz</h3>
+
+<p>
+Translator, Transcriber, Content Writer, Graphic Designer
+</p>
+
+<span class="desc">
+Helping brands with translation, writing, transcription & creative design services.
+</span>
+
+</div>
+
+<div class="card-right">
+
+<a class="linkedin-icon" href="https://www.linkedin.com/in/tehreem-riaz-36b20640b/">
+
+<i class="fa-brands fa-linkedin"></i>
+
+</a>
+
+<a class="open-btn" href="https://www.linkedin.com/in/tehreem-riaz-36b20640b/">
+
+Open
+
+</a>
+
+</div>
+
+</div>
+
+
+
+
+
+<!-- ===== CARD ===== -->
+<div class="card">
+
+<div class="card-left">
+
+<h3>Azrar Chattha</h3>
+
+<p>
+SEO Blog Writer
+</p>
+
+<span class="desc">
+SEO Content Writer | SEO Blogs, Articles & Copy for Beauty, SaaS & More.
+</span>
+
+</div>
+
+<div class="card-right">
+
+<a class="linkedin-icon" href="https://www.linkedin.com/in/azrar-chattha-186aa1268/">
+
+<i class="fa-brands fa-linkedin"></i>
+
+</a>
+
+<a class="open-btn" href="https://www.linkedin.com/in/azrar-chattha-186aa1268/">
+
+Open
+
+</a>
+
+</div>
+
+</div>
+
+
+
+
+
+<!-- ===== CARD ===== -->
+<div class="card">
+
+<div class="card-left">
+
+<h3>Basit Islam</h3>
+
+<p>
+Medical Doctor
+</p>
+
+<span class="desc">
+Medical Doctor | Trusted Healthcare Expert | Professional Patient Care & Online Consultation
+</span>
+
+</div>
+
+<div class="card-right">
+
+<a class="linkedin-icon" href="https://www.linkedin.com/in/basit-islam-247a982ab/">
+
+<i class="fa-brands fa-linkedin"></i>
+
+</a>
+
+<a class="open-btn" href="https://www.linkedin.com/in/basit-islam-247a982ab/">
+
+Open
+
+</a>
+
+</div>
+
+</div>
+
+<!-- ===== CARD ===== -->
+<div class="card">
+
+<div class="card-left">
+
+<h3>Zaib Khan</h3>
+
+<p>
+SEO Content Writer | B2B Copywriter | Blog Writer and Guest Post service
+</p>
+
+<span class="desc">
+Results-driven SEO Content Writer helping brands grow with high-converting B2B copy, engaging blogs, and powerful guest posts.
+</span>
+
+</div>
+
+<div class="card-right">
+
+<a class="linkedin-icon" href="https://www.linkedin.com/in/zaib-khan-46a558335/">
+
+<i class="fa-brands fa-linkedin"></i>
+
+</a>
+
+<a class="open-btn" href="https://www.linkedin.com/in/zaib-khan-46a558335/">
+
+Open
+
+</a>
+
+</div>
+
+</div>
+
+<!-- ===== CARD ===== -->
+<div class="card">
+
+<div class="card-left">
+
+<h3>Arslan Mahmood Khan</h3>
+
+<p>
+Brand Identity & Logo Designer
+</p>
+
+<span class="desc">
+Creative Brand Identity & Logo Designer crafting memorable, modern, and professional designs that make businesses stand out.
+</span>
+
+</div>
+
+<div class="card-right">
+
+<a class="linkedin-icon" href="https://www.linkedin.com/in/amkshahzadaofficial/">
+
+<i class="fa-brands fa-linkedin"></i>
+
+</a>
+
+<a class="open-btn" href="https://www.linkedin.com/in/amkshahzadaofficial/">
+
+Open
+
+</a>
+
+</div>
+
+</div>
+
+<!-- ===== CARD ===== -->
+<div class="card">
+
+<div class="card-left">
+
+<h3>Gulzar Fatima 📓 SEO Content Writer</h3>
+
+<p>
+SEO Content Writer (Freelance)
+</p>
+
+<span class="desc">
+Professional SEO Content Writer creating engaging, keyword-focused content that boosts traffic, rankings, and conversions.
+</span>
+
+</div>
+
+<div class="card-right">
+
+<a class="linkedin-icon" href="https://www.linkedin.com/in/fatimawrites/">
+
+<i class="fa-brands fa-linkedin"></i>
+
+</a>
+
+<a class="open-btn" href="https://www.linkedin.com/in/fatimawrites/">
+
+Open
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ===== FOOTER ===== -->
+<footer>
+
+<p>
+© 2026 Maya Hub • All Rights Reserved
+</p>
+
+<p>
+Made with ❤️ by Maya Hub
+</p>
+
+</footer>
+
+<!-- ===== SEARCH SCRIPT ===== -->
+<script>
+
+const searchInput = document.getElementById("searchInput");
+
+searchInput.addEventListener("keyup", function(){
+
+let filter = searchInput.value.toLowerCase();
+
+let cards = document.querySelectorAll(".card");
+
+cards.forEach(function(card){
+
+let text = card.innerText.toLowerCase();
+
+if(text.includes(filter)){
+card.style.display = "flex";
+}else{
+card.style.display = "none";
+}
+
+});
+
+});
+
+</script>
+
+</body>
+</html>
