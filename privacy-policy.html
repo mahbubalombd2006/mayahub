@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 <title>Privacy Policy - Maya Hub</title>
 
@@ -19,13 +20,19 @@ box-sizing:border-box;
 font-family:'Poppins',sans-serif;
 }
 
+html{
+font-size:clamp(14px, 1.2vw, 16px);
+}
+
 body{
 background:linear-gradient(rgba(248,250,252,0.92), rgba(241,245,249,0.95)),
 url('https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=2070&auto=format&fit=crop');
 background-size:cover;
 background-position:center;
 background-attachment:fixed;
-color:#0f172a;
+min-height:100vh;
+display:flex;
+flex-direction:column;
 overflow-x:hidden;
 }
 
@@ -37,16 +44,16 @@ z-index:1000;
 background:rgba(255,255,255,0.95);
 backdrop-filter:blur(14px);
 border-bottom:1px solid rgba(15,23,42,0.06);
-box-shadow:0 2px 12px rgba(0,0,0,0.04);
 }
 
 .header-container{
-width:100%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:10px 14px;
-gap:10px;
+padding:10px;
+gap:8px;
+flex-wrap:nowrap;
+overflow:hidden;
 }
 
 .logo{
@@ -55,18 +62,19 @@ align-items:center;
 gap:6px;
 font-weight:700;
 color:#2563eb;
-font-size:18px;
+font-size:clamp(14px, 2.5vw, 18px);
 white-space:nowrap;
 }
 
 .top-navbar{
 display:flex;
-gap:8px;
+gap:6px;
+flex-shrink:0;
 }
 
 .top-navbar a{
-width:36px;
-height:36px;
+width:clamp(26px, 6vw, 36px);
+height:clamp(26px, 6vw, 36px);
 display:flex;
 align-items:center;
 justify-content:center;
@@ -75,7 +83,8 @@ border-radius:10px;
 border:1px solid rgba(15,23,42,0.06);
 color:#334155;
 text-decoration:none;
-transition:.3s;
+font-size:clamp(12px, 2vw, 16px);
+transition:.2s;
 }
 
 .top-navbar a:hover{
@@ -83,79 +92,61 @@ background:#2563eb;
 color:white;
 }
 
-/* ===== CONTAINER FULL WIDTH ===== */
+/* ===== POLICY CARDS ===== */
 .container{
-width:100%;
-padding:25px 14px;
+max-width:900px;
+margin:12px auto;
+padding:0 10px;
+flex:1;
 }
 
-/* ===== TITLE ===== */
-.title{
-text-align:center;
-margin-bottom:30px;
-}
-
-.title h1{
-font-size:42px;
-color:#2563eb;
-}
-
-.title p{
-color:#64748b;
-margin-top:10px;
-}
-
-/* ===== GRID FULL WIDTH ===== */
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-gap:14px;
-width:100%;
-}
-
-/* ===== CARD FULL WIDTH STYLE ===== */
 .card{
-width:100%;
-background:rgba(255,255,255,0.96);
+background:rgba(255,255,255,0.95);
+padding:16px;
+border-radius:18px;
+margin-bottom:12px;
 border:1px solid rgba(15,23,42,0.06);
-border-radius:16px;
-padding:18px;
-box-shadow:0 10px 25px rgba(0,0,0,0.05);
-transition:.3s;
+box-shadow:0 6px 18px rgba(0,0,0,0.05);
+transition:.2s;
 }
 
 .card:hover{
-transform:translateY(-5px);
-border-color:#60a5fa;
+transform:translateY(-3px);
 }
 
 .card h3{
 color:#1d4ed8;
+font-size:15px;
 margin-bottom:8px;
-font-size:18px;
+display:flex;
+gap:8px;
+align-items:center;
 }
 
 .card p{
-color:#64748b;
+color:#475569;
 font-size:14px;
-line-height:1.8;
+line-height:1.7;
+}
+
+/* badge */
+.badge{
+display:inline-block;
+margin-top:10px;
+padding:4px 10px;
+border-radius:10px;
+background:#eef2ff;
+color:#1d4ed8;
+font-size:12px;
 }
 
 /* ===== FOOTER ===== */
 footer{
 text-align:center;
-padding:25px;
-margin-top:40px;
-background:rgba(255,255,255,0.9);
-border-top:1px solid rgba(15,23,42,0.06);
+padding:18px;
 color:#64748b;
-}
-
-/* ===== MOBILE ===== */
-@media(max-width:600px){
-.title h1{
-font-size:30px;
-}
+margin-top:auto;
+background:rgba(255,255,255,0.8);
 }
 
 </style>
@@ -163,9 +154,8 @@ font-size:30px;
 
 <body>
 
-<!-- ===== HEADER ===== -->
+<!-- HEADER -->
 <header class="main-header">
-
 <div class="header-container">
 
 <div class="logo">
@@ -183,84 +173,59 @@ Maya Hub
 </nav>
 
 </div>
-
 </header>
 
-<!-- ===== CONTENT ===== -->
+<!-- PRIVACY CONTENT -->
 <div class="container">
 
-<div class="title">
-<h1>Privacy Policy</h1>
-<p>We respect your privacy and protect your data</p>
+<!-- CARD 1 -->
+<div class="card">
+<h3><i class="fa-solid fa-lock"></i> Information We Collect</h3>
+<p>
+We may collect basic information such as name, email address, and profile details when users register or contact us.
+</p>
+<span class="badge">Data Collection</span>
 </div>
 
-<div class="grid">
+<!-- CARD 2 -->
+<div class="card">
+<h3><i class="fa-solid fa-shield-halved"></i> How We Use Data</h3>
+<p>
+Your information is used to improve user experience, connect freelancers with clients, and maintain platform security.
+</p>
+<span class="badge">Usage</span>
+</div>
 
-<!-- 1 -->
-<div class="card"><h3>Information Collection</h3><p>We collect basic user data like name, email, and profile details.</p></div>
+<!-- CARD 3 -->
+<div class="card">
+<h3><i class="fa-solid fa-user-lock"></i> Data Protection</h3>
+<p>
+We take reasonable measures to protect your data. However, no system is 100% secure, so users should be careful online.
+</p>
+<span class="badge">Security</span>
+</div>
 
-<!-- 2 -->
-<div class="card"><h3>Data Usage</h3><p>Your data helps connect freelancers and clients efficiently.</p></div>
+<!-- CARD 4 -->
+<div class="card">
+<h3><i class="fa-solid fa-share-nodes"></i> Third-Party Sharing</h3>
+<p>
+We do not sell your personal data. Some information may be shared with trusted services only when necessary for platform operation.
+</p>
+<span class="badge">Privacy</span>
+</div>
 
-<!-- 3 -->
-<div class="card"><h3>Profile Visibility</h3><p>Freelancer profiles may be visible publicly on the platform.</p></div>
-
-<!-- 4 -->
-<div class="card"><h3>Security</h3><p>We apply standard security measures to protect user data.</p></div>
-
-<!-- 5 -->
-<div class="card"><h3>Cookies</h3><p>We use cookies to improve user experience and analytics.</p></div>
-
-<!-- 6 -->
-<div class="card"><h3>Third Party Links</h3><p>External links like LinkedIn are not controlled by Maya Hub.</p></div>
-
-<!-- 7 -->
-<div class="card"><h3>Account Responsibility</h3><p>Users must keep their information accurate and updated.</p></div>
-
-<!-- 8 -->
-<div class="card"><h3>No Data Selling</h3><p>We do not sell user data to any third party.</p></div>
-
-<!-- 9 -->
-<div class="card"><h3>Communication</h3><p>Client and freelancer communication happens externally.</p></div>
-
-<!-- 10 -->
-<div class="card"><h3>Policy Updates</h3><p>We may update privacy policies anytime.</p></div>
-
-<!-- 11 -->
-<div class="card"><h3>User Consent</h3><p>Using Maya Hub means you agree to this policy.</p></div>
-
-<!-- 12 -->
-<div class="card"><h3>Data Protection</h3><p>We protect data from unauthorized access.</p></div>
-
-<!-- 13 -->
-<div class="card"><h3>Analytics</h3><p>We may use analytics to improve platform performance.</p></div>
-
-<!-- 14 -->
-<div class="card"><h3>Service Improvement</h3><p>Collected data helps improve platform features.</p></div>
-
-<!-- 15 -->
-<div class="card"><h3>Access Control</h3><p>Only authorized system access is allowed.</p></div>
-
-<!-- 16 -->
-<div class="card"><h3>Data Retention</h3><p>We store data only as long as necessary.</p></div>
-
-<!-- 17 -->
-<div class="card"><h3>Children Privacy</h3><p>This platform is not intended for children under 13.</p></div>
-
-<!-- 18 -->
-<div class="card"><h3>Legal Compliance</h3><p>We follow basic digital privacy regulations.</p></div>
-
-<!-- 19 -->
-<div class="card"><h3>Account Deletion</h3><p>Users can request account deletion anytime.</p></div>
-
-<!-- 20 -->
-<div class="card"><h3>Contact Support</h3><p>For privacy concerns, contact our support team.</p></div>
-
+<!-- CARD 5 -->
+<div class="card">
+<h3><i class="fa-solid fa-cookie-bite"></i> Cookies</h3>
+<p>
+Maya Hub may use cookies to improve user experience and analyze platform performance.
+</p>
+<span class="badge">Cookies</span>
 </div>
 
 </div>
 
-<!-- ===== FOOTER ===== -->
+<!-- FOOTER -->
 <footer>
 <p>© 2026 Maya Hub • All Rights Reserved</p>
 </footer>

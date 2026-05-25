@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 <title>Terms & Conditions - Maya Hub</title>
 
@@ -19,13 +20,19 @@ box-sizing:border-box;
 font-family:'Poppins',sans-serif;
 }
 
+html{
+font-size:clamp(14px, 1.2vw, 16px);
+}
+
 body{
 background:linear-gradient(rgba(248,250,252,0.92), rgba(241,245,249,0.95)),
 url('https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=2070&auto=format&fit=crop');
 background-size:cover;
 background-position:center;
 background-attachment:fixed;
-color:#0f172a;
+min-height:100vh;
+display:flex;
+flex-direction:column;
 overflow-x:hidden;
 }
 
@@ -37,16 +44,16 @@ z-index:1000;
 background:rgba(255,255,255,0.95);
 backdrop-filter:blur(14px);
 border-bottom:1px solid rgba(15,23,42,0.06);
-box-shadow:0 2px 12px rgba(0,0,0,0.04);
 }
 
 .header-container{
-width:100%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:10px 14px;
-gap:10px;
+padding:10px;
+gap:8px;
+flex-wrap:nowrap;
+overflow:hidden;
 }
 
 .logo{
@@ -55,18 +62,19 @@ align-items:center;
 gap:6px;
 font-weight:700;
 color:#2563eb;
-font-size:18px;
+font-size:clamp(14px, 2.5vw, 18px);
 white-space:nowrap;
 }
 
 .top-navbar{
 display:flex;
-gap:8px;
+gap:6px;
+flex-shrink:0;
 }
 
 .top-navbar a{
-width:36px;
-height:36px;
+width:clamp(26px, 6vw, 36px);
+height:clamp(26px, 6vw, 36px);
 display:flex;
 align-items:center;
 justify-content:center;
@@ -75,7 +83,8 @@ border-radius:10px;
 border:1px solid rgba(15,23,42,0.06);
 color:#334155;
 text-decoration:none;
-transition:.3s;
+font-size:clamp(12px, 2vw, 16px);
+transition:.2s;
 }
 
 .top-navbar a:hover{
@@ -83,83 +92,61 @@ background:#2563eb;
 color:white;
 }
 
-/* ===== FULL WIDTH FIX ===== */
+/* ===== TERMS CARDS ===== */
 .container{
-width:100%;
-padding:25px 20px;
+max-width:900px;
+margin:12px auto;
+padding:0 10px;
+flex:1;
 }
 
-/* ===== TITLE ===== */
-.title{
-text-align:center;
-margin-bottom:30px;
-}
-
-.title h1{
-font-size:44px;
-color:#2563eb;
-}
-
-.title p{
-color:#64748b;
-margin-top:10px;
-}
-
-/* ===== GRID FULL EDGE ===== */
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:16px;
-width:100%;
-}
-
-/* ===== CARD FULL WIDTH STYLE ===== */
 .card{
-width:100%;
-background:rgba(255,255,255,0.96);
+background:rgba(255,255,255,0.95);
+padding:16px;
+border-radius:18px;
+margin-bottom:12px;
 border:1px solid rgba(15,23,42,0.06);
-border-radius:16px;
-padding:18px;
-box-shadow:0 10px 25px rgba(0,0,0,0.05);
-transition:.3s;
+box-shadow:0 6px 18px rgba(0,0,0,0.05);
+transition:.2s;
 }
 
 .card:hover{
-transform:translateY(-6px);
-border-color:#60a5fa;
+transform:translateY(-3px);
 }
 
 .card h3{
 color:#1d4ed8;
+font-size:15px;
 margin-bottom:8px;
-font-size:18px;
+display:flex;
+gap:8px;
+align-items:center;
 }
 
 .card p{
-color:#64748b;
+color:#475569;
 font-size:14px;
-line-height:1.8;
+line-height:1.7;
 }
 
-/* ===== FOOTER FULL WIDTH ===== */
+/* badge */
+.badge{
+display:inline-block;
+margin-top:10px;
+padding:4px 10px;
+border-radius:10px;
+background:#eef2ff;
+color:#1d4ed8;
+font-size:12px;
+}
+
+/* ===== FOOTER ===== */
 footer{
-width:100%;
 text-align:center;
-padding:25px;
-margin-top:40px;
-background:rgba(255,255,255,0.9);
-border-top:1px solid rgba(15,23,42,0.06);
+padding:18px;
 color:#64748b;
-}
-
-/* ===== MOBILE ===== */
-@media(max-width:600px){
-.title h1{
-font-size:30px;
-}
-.container{
-padding:18px 12px;
-}
+margin-top:auto;
+background:rgba(255,255,255,0.8);
 }
 
 </style>
@@ -167,9 +154,8 @@ padding:18px 12px;
 
 <body>
 
-<!-- ===== HEADER ===== -->
+<!-- HEADER -->
 <header class="main-header">
-
 <div class="header-container">
 
 <div class="logo">
@@ -187,47 +173,59 @@ Maya Hub
 </nav>
 
 </div>
-
 </header>
 
-<!-- ===== CONTENT ===== -->
+<!-- TERMS CONTENT -->
 <div class="container">
 
-<div class="title">
-<h1>Terms & Conditions</h1>
-<p>Please read all rules before using Maya Hub</p>
+<!-- CARD 1 -->
+<div class="card">
+<h3><i class="fa-solid fa-file-contract"></i> Acceptance of Terms</h3>
+<p>
+By using Maya Hub, you agree to follow all rules, guidelines, and policies of our platform. If you do not agree, please do not use our service.
+</p>
+<span class="badge">Legal</span>
 </div>
 
-<div class="grid">
+<!-- CARD 2 -->
+<div class="card">
+<h3><i class="fa-solid fa-user-shield"></i> User Responsibility</h3>
+<p>
+Users are responsible for their own profiles, content, and communication. Any misuse or false information may result in account restriction.
+</p>
+<span class="badge">Rules</span>
+</div>
 
-<!-- 20 CARDS -->
+<!-- CARD 3 -->
+<div class="card">
+<h3><i class="fa-solid fa-handshake"></i> Freelancer & Client Interaction</h3>
+<p>
+All communication between freelancers and clients must be respectful and professional. We are not responsible for external agreements.
+</p>
+<span class="badge">Policy</span>
+</div>
 
-<div class="card"><h3>Platform Usage</h3><p>Users must use the platform legally and responsibly.</p></div>
-<div class="card"><h3>User Agreement</h3><p>By using Maya Hub you accept all terms.</p></div>
-<div class="card"><h3>Profile Accuracy</h3><p>All users must provide correct information.</p></div>
-<div class="card"><h3>Freelancer Behavior</h3><p>Professional behavior is required at all times.</p></div>
-<div class="card"><h3>Client Conduct</h3><p>Clients must communicate respectfully.</p></div>
-<div class="card"><h3>Independent Deals</h3><p>All deals happen outside the platform.</p></div>
-<div class="card"><h3>No Responsibility</h3><p>Maya Hub is not responsible for disputes.</p></div>
-<div class="card"><h3>Payments</h3><p>Payments are handled privately between users.</p></div>
-<div class="card"><h3>Illegal Activity</h3><p>Strictly no illegal content allowed.</p></div>
-<div class="card"><h3>Account Security</h3><p>Users are responsible for their accounts.</p></div>
-<div class="card"><h3>Data Accuracy</h3><p>Keep profile information updated.</p></div>
-<div class="card"><h3>External Links</h3><p>We are not responsible for third-party sites.</p></div>
-<div class="card"><h3>Service Updates</h3><p>We may change services anytime.</p></div>
-<div class="card"><h3>Account Suspension</h3><p>Violation may lead to account ban.</p></div>
-<div class="card"><h3>Privacy Rules</h3><p>Privacy policy must be followed.</p></div>
-<div class="card"><h3>Spam Control</h3><p>Spam and fake activity is forbidden.</p></div>
-<div class="card"><h3>Copyright</h3><p>Respect all intellectual property rights.</p></div>
-<div class="card"><h3>Availability</h3><p>Service may not always be available.</p></div>
-<div class="card"><h3>Terms Update</h3><p>We may update terms anytime.</p></div>
-<div class="card"><h3>Contact Support</h3><p>Contact us for any issues.</p></div>
+<!-- CARD 4 -->
+<div class="card">
+<h3><i class="fa-solid fa-shield-halved"></i> Privacy & Safety</h3>
+<p>
+We aim to keep user data safe, but users should also avoid sharing sensitive personal or financial information publicly.
+</p>
+<span class="badge">Security</span>
+</div>
 
+<!-- CARD 5 -->
+<div class="card">
+<h3><i class="fa-solid fa-ban"></i> Account Termination</h3>
+<p>
+We reserve the right to suspend or delete accounts that violate rules, spam, or misuse the platform.
+</p>
+<span class="badge">Enforcement</span>
 </div>
 
 </div>
 
-<!-- ===== FOOTER ===== -->
+<!-- FOOTER -->
 <footer>
 <p>© 2026 Maya Hub • All Rights Reserved</p>
 </footer>

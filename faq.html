@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 <title>FAQ - Maya Hub</title>
 
@@ -19,13 +20,19 @@ box-sizing:border-box;
 font-family:'Poppins',sans-serif;
 }
 
+html{
+font-size:clamp(14px, 1.2vw, 16px);
+}
+
 body{
 background:linear-gradient(rgba(248,250,252,0.92), rgba(241,245,249,0.95)),
 url('https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=2070&auto=format&fit=crop');
 background-size:cover;
 background-position:center;
 background-attachment:fixed;
-color:#0f172a;
+min-height:100vh;
+display:flex;
+flex-direction:column;
 overflow-x:hidden;
 }
 
@@ -37,16 +44,16 @@ z-index:1000;
 background:rgba(255,255,255,0.95);
 backdrop-filter:blur(14px);
 border-bottom:1px solid rgba(15,23,42,0.06);
-box-shadow:0 2px 12px rgba(0,0,0,0.04);
 }
 
 .header-container{
-width:100%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:10px 14px;
-gap:10px;
+padding:10px;
+gap:8px;
+flex-wrap:nowrap;
+overflow:hidden;
 }
 
 .logo{
@@ -55,18 +62,19 @@ align-items:center;
 gap:6px;
 font-weight:700;
 color:#2563eb;
-font-size:18px;
+font-size:clamp(14px, 2.5vw, 18px);
 white-space:nowrap;
 }
 
 .top-navbar{
 display:flex;
-gap:8px;
+gap:6px;
+flex-shrink:0;
 }
 
 .top-navbar a{
-width:36px;
-height:36px;
+width:clamp(26px, 6vw, 36px);
+height:clamp(26px, 6vw, 36px);
 display:flex;
 align-items:center;
 justify-content:center;
@@ -75,7 +83,8 @@ border-radius:10px;
 border:1px solid rgba(15,23,42,0.06);
 color:#334155;
 text-decoration:none;
-transition:.3s;
+font-size:clamp(12px, 2vw, 16px);
+transition:.2s;
 }
 
 .top-navbar a:hover{
@@ -83,87 +92,61 @@ background:#2563eb;
 color:white;
 }
 
-/* ===== CONTAINER ===== */
+/* ===== FAQ CARDS ===== */
 .container{
 max-width:900px;
-margin:auto;
-padding:25px 14px;
+margin:12px auto;
+padding:0 10px;
+flex:1;
 }
 
-/* ===== TITLE ===== */
-.title{
-text-align:center;
-margin-bottom:30px;
-}
-
-.title h1{
-font-size:42px;
-color:#2563eb;
-}
-
-.title p{
-color:#64748b;
-margin-top:10px;
-}
-
-/* ===== FAQ CARD ===== */
-.faq-item{
-background:rgba(255,255,255,0.96);
-border:1px solid rgba(15,23,42,0.06);
-border-radius:14px;
-margin-bottom:12px;
-overflow:hidden;
-box-shadow:0 10px 25px rgba(0,0,0,0.05);
-}
-
-.faq-question{
+.card{
+background:rgba(255,255,255,0.95);
 padding:16px;
-cursor:pointer;
-display:flex;
-justify-content:space-between;
-align-items:center;
-font-weight:600;
+border-radius:18px;
+margin-bottom:12px;
+border:1px solid rgba(15,23,42,0.06);
+box-shadow:0 6px 18px rgba(0,0,0,0.05);
+transition:.2s;
+}
+
+.card:hover{
+transform:translateY(-3px);
+}
+
+.card h3{
 color:#1d4ed8;
+font-size:15px;
+margin-bottom:8px;
+display:flex;
+gap:8px;
+align-items:center;
 }
 
-.faq-answer{
-max-height:0;
-overflow:hidden;
-transition:.3s ease;
-padding:0 16px;
-color:#64748b;
-line-height:1.8;
+.card p{
+color:#475569;
 font-size:14px;
+line-height:1.7;
 }
 
-.faq-item.active .faq-answer{
-max-height:200px;
-padding:0 16px 16px 16px;
-}
-
-.icon{
-transition:.3s;
-}
-
-.faq-item.active .icon{
-transform:rotate(180deg);
+/* badge */
+.badge{
+display:inline-block;
+margin-top:10px;
+padding:4px 10px;
+border-radius:10px;
+background:#eef2ff;
+color:#1d4ed8;
+font-size:12px;
 }
 
 /* ===== FOOTER ===== */
 footer{
 text-align:center;
-padding:25px;
-margin-top:40px;
-background:rgba(255,255,255,0.9);
-border-top:1px solid rgba(15,23,42,0.06);
+padding:18px;
 color:#64748b;
-}
-
-/* ===== MOBILE SAFE ===== */
-@media(max-width:600px){
-.title h1{
-font-size:32px;
-}
+margin-top:auto;
+background:rgba(255,255,255,0.8);
 }
 
 </style>
@@ -171,9 +154,8 @@ font-size:32px;
 
 <body>
 
-<!-- ===== HEADER ===== -->
+<!-- HEADER -->
 <header class="main-header">
-
 <div class="header-container">
 
 <div class="logo">
@@ -191,158 +173,62 @@ Maya Hub
 </nav>
 
 </div>
-
 </header>
 
-<!-- ===== CONTENT ===== -->
+<!-- FAQ CONTENT -->
 <div class="container">
 
-<div class="title">
-<h1>FAQ</h1>
-<p>Frequently Asked Questions</p>
+<!-- FAQ 1 -->
+<div class="card">
+<h3><i class="fa-solid fa-question"></i> What is Maya Hub?</h3>
+<p>
+Maya Hub is a freelancer marketplace where clients can find web developers, designers, SEO experts, and other digital professionals.
+</p>
+<span class="badge">General</span>
 </div>
 
-<!-- ===== 20 FAQ ===== -->
-
-<!-- 1 -->
-<div class="faq-item">
-<div class="faq-question">What is Maya Hub?<span class="icon"><i class="fa-solid fa-chevron-down"></i></span></div>
-<div class="faq-answer">Maya Hub is a freelancer marketplace for connecting clients and professionals.</div>
+<!-- FAQ 2 -->
+<div class="card">
+<h3><i class="fa-solid fa-user"></i> How do I hire a freelancer?</h3>
+<p>
+Just browse freelancer profiles, click “Open”, and contact them directly through available links like LinkedIn or contact form.
+</p>
+<span class="badge">Hiring</span>
 </div>
 
-<!-- 2 -->
-<div class="faq-item">
-<div class="faq-question">Is it free?<span class="icon"><i class="fa-solid fa-chevron-down"></i></span></div>
-<div class="faq-answer">Yes, Maya Hub is free for both freelancers and clients.</div>
+<!-- FAQ 3 -->
+<div class="card">
+<h3><i class="fa-solid fa-money-check"></i> Is Maya Hub free?</h3>
+<p>
+Yes, Maya Hub is free to use for both clients and freelancers. No hidden charges are applied.
+</p>
+<span class="badge">Pricing</span>
 </div>
 
-<!-- 3 -->
-<div class="faq-item">
-<div class="faq-question">How to join?<span class="icon"><i class="fa-solid fa-chevron-down"></i></span></div>
-<div class="faq-answer">You can join by creating a profile and listing your services.</div>
+<!-- FAQ 4 -->
+<div class="card">
+<h3><i class="fa-solid fa-shield-halved"></i> Is it safe?</h3>
+<p>
+We try to keep the platform safe and clean by listing verified freelancer profiles and easy contact systems.
+</p>
+<span class="badge">Security</span>
 </div>
 
-<!-- 4 -->
-<div class="faq-item">
-<div class="faq-question">Can I hire freelancers?<span class="icon"><i class="fa-solid fa-chevron-down"></i></span></div>
-<div class="faq-answer">Yes, clients can directly contact freelancers.</div>
-</div>
-
-<!-- 5 -->
-<div class="faq-item">
-<div class="faq-question">Is payment handled?<span class="icon"><i class="fa-solid fa-chevron-down"></i></span></div>
-<div class="faq-answer">No, payment is handled directly between client and freelancer.</div>
-</div>
-
-<!-- 6 -->
-<div class="faq-item">
-<div class="faq-question">Can I update profile?<span class="icon"><i class="fa-solid fa-chevron-down"></i></span></div>
-<div class="faq-answer">Yes, you can update your profile anytime.</div>
-</div>
-
-<!-- 7 -->
-<div class="faq-item">
-<div class="faq-question">Is my data safe?<span class="icon"><i class="fa-solid fa-chevron-down"></i></span></div>
-<div class="faq-answer">Yes, we follow standard privacy protection methods.</div>
-</div>
-
-<!-- 8 -->
-<div class="faq-item">
-<div class="faq-question">How to contact support?<span class="icon"><i class="fa-solid fa-chevron-down"></i></span></div>
-<div class="faq-answer">Use the contact page to reach support team.</div>
-</div>
-
-<!-- 9 -->
-<div class="faq-item">
-<div class="faq-question">Can I delete account?<span class="icon"><i class="fa-solid fa-chevron-down"></i></span></div>
-<div class="faq-answer">Yes, account deletion is possible anytime.</div>
-</div>
-
-<!-- 10 -->
-<div class="faq-item">
-<div class="faq-question">Do you verify freelancers?<span class="icon"><i class="fa-solid fa-chevron-down"></i></span></div>
-<div class="faq-answer">We recommend checking profiles before hiring.</div>
-</div>
-
-<!-- 11 -->
-<div class="faq-item">
-<div class="faq-question">Is there mobile support?<span class="icon"><i class="fa-solid fa-chevron-down"></i></span></div>
-<div class="faq-answer">Yes, Maya Hub is fully mobile responsive.</div>
-</div>
-
-<!-- 12 -->
-<div class="faq-item">
-<div class="faq-question">Can I list services?<span class="icon"><i class="fa-solid fa-chevron-down"></i></span></div>
-<div class="faq-answer">Yes, freelancers can list all services.</div>
-</div>
-
-<!-- 13 -->
-<div class="faq-item">
-<div class="faq-question">Is there commission?<span class="icon"><i class="fa-solid fa-chevron-down"></i></span></div>
-<div class="faq-answer">Currently no commission is charged.</div>
-</div>
-
-<!-- 14 -->
-<div class="faq-item">
-<div class="faq-question">Can I contact multiple freelancers?<span class="icon"><i class="fa-solid fa-chevron-down"></i></span></div>
-<div class="faq-answer">Yes, you can contact anyone.</div>
-</div>
-
-<!-- 15 -->
-<div class="faq-item">
-<div class="faq-question">Is login required?<span class="icon"><i class="fa-solid fa-chevron-down"></i></span></div>
-<div class="faq-answer">No login is required for browsing.</div>
-</div>
-
-<!-- 16 -->
-<div class="faq-item">
-<div class="faq-question">Can I report user?<span class="icon"><i class="fa-solid fa-chevron-down"></i></span></div>
-<div class="faq-answer">Yes, report option will be added soon.</div>
-</div>
-
-<!-- 17 -->
-<div class="faq-item">
-<div class="faq-question">Do you support global users?<span class="icon"><i class="fa-solid fa-chevron-down"></i></span></div>
-<div class="faq-answer">Yes, it is a global platform.</div>
-</div>
-
-<!-- 18 -->
-<div class="faq-item">
-<div class="faq-question">Can I advertise service?<span class="icon"><i class="fa-solid fa-chevron-down"></i></span></div>
-<div class="faq-answer">Yes, freelancers can promote services.</div>
-</div>
-
-<!-- 19 -->
-<div class="faq-item">
-<div class="faq-question">Is support 24/7?<span class="icon"><i class="fa-solid fa-chevron-down"></i></span></div>
-<div class="faq-answer">Support availability depends on system updates.</div>
-</div>
-
-<!-- 20 -->
-<div class="faq-item">
-<div class="faq-question">Will Maya Hub grow?<span class="icon"><i class="fa-solid fa-chevron-down"></i></span></div>
-<div class="faq-answer">Yes, we are continuously improving the platform.</div>
+<!-- FAQ 5 -->
+<div class="card">
+<h3><i class="fa-solid fa-headset"></i> How can I contact support?</h3>
+<p>
+You can go to the contact page and send a message. We will reply as soon as possible.
+</p>
+<span class="badge">Support</span>
 </div>
 
 </div>
 
-<!-- ===== FOOTER ===== -->
+<!-- FOOTER -->
 <footer>
 <p>© 2026 Maya Hub • All Rights Reserved</p>
 </footer>
-
-<!-- ===== SCRIPT ===== -->
-<script>
-
-const items = document.querySelectorAll(".faq-item");
-
-items.forEach(item => {
-item.querySelector(".faq-question").addEventListener("click", () => {
-item.classList.toggle("active");
-});
-});
-
-</script>
 
 </body>
 </html>

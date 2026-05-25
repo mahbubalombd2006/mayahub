@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 <title>Maya Hub - Freelancer Marketplace</title>
 
@@ -19,14 +20,19 @@ box-sizing:border-box;
 font-family:'Poppins',sans-serif;
 }
 
+html{
+font-size:clamp(14px, 1.2vw, 16px);
+}
+
 body{
 background:linear-gradient(rgba(248,250,252,0.92), rgba(241,245,249,0.95)),
 url('https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=2070&auto=format&fit=crop');
 background-size:cover;
 background-position:center;
 background-attachment:fixed;
-color:#0f172a;
 min-height:100vh;
+display:flex;
+flex-direction:column;
 overflow-x:hidden;
 }
 
@@ -38,55 +44,39 @@ z-index:1000;
 background:rgba(255,255,255,0.95);
 backdrop-filter:blur(14px);
 border-bottom:1px solid rgba(15,23,42,0.06);
-box-shadow:0 2px 12px rgba(0,0,0,0.04);
 }
 
 .header-container{
-width:100%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:10px 14px;
-gap:10px;
+padding:10px;
+gap:8px;
+flex-wrap:nowrap;
+overflow:hidden;
 }
 
+/* LOGO */
 .logo{
 display:flex;
 align-items:center;
 gap:6px;
 font-weight:700;
 color:#2563eb;
-font-size:18px;
+font-size:clamp(14px, 2.5vw, 18px);
 white-space:nowrap;
 }
 
-.search-box{
-flex:1;
-display:flex;
-align-items:center;
-gap:8px;
-background:white;
-padding:8px 12px;
-border-radius:12px;
-border:1px solid rgba(15,23,42,0.08);
-}
-
-.search-box input{
-width:100%;
-border:none;
-outline:none;
-background:transparent;
-font-size:14px;
-}
-
+/* NAV */
 .top-navbar{
 display:flex;
-gap:8px;
+gap:6px;
+flex-shrink:0;
 }
 
 .top-navbar a{
-width:36px;
-height:36px;
+width:clamp(26px, 6vw, 36px);
+height:clamp(26px, 6vw, 36px);
 display:flex;
 align-items:center;
 justify-content:center;
@@ -95,7 +85,8 @@ border-radius:10px;
 border:1px solid rgba(15,23,42,0.06);
 color:#334155;
 text-decoration:none;
-transition:.3s;
+font-size:clamp(12px, 2vw, 16px);
+transition:.2s;
 }
 
 .top-navbar a:hover{
@@ -103,38 +94,46 @@ background:#2563eb;
 color:white;
 }
 
-/* ===== CONTAINER ===== */
-.container{
-max-width:1100px;
-margin:auto;
-padding:25px 14px;
+/* ===== SEARCH ===== */
+.search-card{
+margin:12px 10px;
+background:white;
+padding:10px 12px;
+border-radius:14px;
+display:flex;
+align-items:center;
+gap:10px;
+border:1px solid rgba(15,23,42,0.08);
+box-shadow:0 6px 18px rgba(0,0,0,0.05);
+}
+
+.search-card input{
+width:100%;
+border:none;
+outline:none;
+font-size:14px;
 }
 
 /* ===== CARD ===== */
 .card{
 background:rgba(255,255,255,0.95);
-padding:18px;
+padding:16px;
 border-radius:18px;
-margin-bottom:14px;
-
+margin-bottom:12px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-
 border:1px solid rgba(15,23,42,0.06);
-box-shadow:0 10px 25px rgba(0,0,0,0.05);
-transition:.3s;
+transition:.2s;
 }
 
 .card:hover{
-transform:translateY(-4px);
-border-color:#60a5fa;
+transform:translateY(-3px);
 }
 
-/* LEFT */
 .user-info h3{
 color:#1d4ed8;
-margin-bottom:4px;
+font-size:16px;
 }
 
 .user-info p{
@@ -150,33 +149,20 @@ color:#1d4ed8;
 padding:4px 10px;
 border-radius:10px;
 font-size:12px;
-font-weight:600;
 }
 
-/* RIGHT */
+/* ===== RIGHT SIDE ===== */
 .card-right{
 display:flex;
 align-items:center;
-gap:10px;
+gap:8px;
+flex-wrap:nowrap;
 }
 
-.open-btn{
-background:#2563eb;
-color:white;
-padding:8px 14px;
-border-radius:10px;
-text-decoration:none;
-font-size:13px;
-font-weight:600;
-}
-
-.open-btn:hover{
-background:#1d4ed8;
-}
-
+/* ===== LINKEDIN (RESPONSIVE FIX) ===== */
 .linkedin{
-width:40px;
-height:40px;
+width:clamp(28px, 6vw, 38px);
+height:clamp(28px, 6vw, 38px);
 display:flex;
 align-items:center;
 justify-content:center;
@@ -184,16 +170,57 @@ border-radius:50%;
 background:#0a66c2;
 color:white;
 text-decoration:none;
+font-size:clamp(12px, 2.5vw, 16px);
+transition:0.2s;
+flex-shrink:0;
+}
+
+.linkedin:hover{
+background:#004182;
+transform:scale(1.05);
+}
+
+/* OPEN BUTTON */
+.open-btn{
+background:#2563eb;
+color:white;
+padding:clamp(6px, 2vw, 8px) clamp(10px, 3vw, 14px);
+border-radius:10px;
+text-decoration:none;
+font-size:clamp(11px, 2.5vw, 13px);
+font-weight:600;
+white-space:nowrap;
+flex-shrink:0;
 }
 
 /* ===== FOOTER ===== */
 footer{
 text-align:center;
-padding:25px;
-margin-top:40px;
-background:rgba(255,255,255,0.9);
-border-top:1px solid rgba(15,23,42,0.06);
+padding:18px;
 color:#64748b;
+margin-top:auto;
+background:rgba(255,255,255,0.8);
+}
+
+/* ===== MOBILE ===== */
+@media(max-width:600px){
+
+.card{
+flex-direction:column;
+align-items:flex-start;
+gap:10px;
+}
+
+.card-right{
+width:100%;
+justify-content:space-between;
+}
+
+.open-btn{
+width:100%;
+text-align:center;
+}
+
 }
 
 </style>
@@ -201,20 +228,13 @@ color:#64748b;
 
 <body>
 
-<!-- ===== HEADER ===== -->
+<!-- HEADER -->
 <header class="main-header">
-
 <div class="header-container">
 
 <div class="logo">
 <i class="fa-solid fa-briefcase"></i>
 Maya Hub
-</div>
-
-<!-- SEARCH -->
-<div class="search-box">
-<i class="fa-solid fa-magnifying-glass"></i>
-<input type="text" id="searchInput" placeholder="Search name, role or ID...">
 </div>
 
 <nav class="top-navbar">
@@ -227,25 +247,31 @@ Maya Hub
 </nav>
 
 </div>
-
 </header>
 
-<!-- ===== CONTENT ===== -->
-<div class="container" id="userContainer">
+<!-- SEARCH -->
+<div class="search-card">
+<i class="fa-solid fa-magnifying-glass"></i>
+<input type="text" id="searchInput" placeholder="Search name, role or ID...">
+</div>
 
-<!-- CARD -->
+<!-- CONTENT -->
+<div class="container">
+
 <div class="card">
 <div class="user-info">
 <h3>Mahbub Alom</h3>
 <p>Web Developer</p>
 <span class="user-id">ID: MH-01</span>
 </div>
+
 <div class="card-right">
-<a class="linkedin" href="https://www.linkedin.com/in/mahbubalombd2006/"><i class="fa-brands fa-linkedin"></i></a>
+<a class="linkedin" href="https://www.linkedin.com/in/mahbubalombd2006/" target="_blank">
+<i class="fa-brands fa-linkedin-in"></i>
+</a>
 <a class="open-btn" href="https://www.linkedin.com/in/mahbubalombd2006/">Open</a>
 </div>
 </div>
-
 
 <div class="card">
 <div class="user-info">
@@ -253,43 +279,34 @@ Maya Hub
 <p>SEO Writer</p>
 <span class="user-id">ID: MH-02</span>
 </div>
+
 <div class="card-right">
-<a class="linkedin" href="https://www.linkedin.com/in/javaria-mehdi/"><i class="fa-brands fa-linkedin"></i></a>
+<a class="linkedin" href="https://www.linkedin.com/in/javaria-mehdi/" target="_blank">
+<i class="fa-brands fa-linkedin-in"></i>
+</a>
 <a class="open-btn" href="https://www.linkedin.com/in/javaria-mehdi/">Open</a>
 </div>
 </div>
 
+</div>
 
-
-<!-- ===== FOOTER ===== -->
+<!-- FOOTER -->
 <footer>
 <p>© 2026 Maya Hub • All Rights Reserved</p>
 </footer>
 
-<!-- ===== SEARCH SCRIPT ===== -->
+<!-- SEARCH SCRIPT -->
 <script>
-
 const searchInput = document.getElementById("searchInput");
 const cards = document.querySelectorAll(".card");
 
-searchInput.addEventListener("keyup", function(){
-
-let value = searchInput.value.toLowerCase();
+searchInput.addEventListener("input", function () {
+let value = this.value.toLowerCase();
 
 cards.forEach(card => {
-
-let text = card.innerText.toLowerCase();
-
-if(text.includes(value)){
-card.style.display = "flex";
-}else{
-card.style.display = "none";
-}
-
+card.style.display = card.innerText.toLowerCase().includes(value) ? "flex" : "none";
 });
-
 });
-
 </script>
 
 </body>
