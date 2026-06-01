@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script>(function(s){s.dataset.zone='11061445',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
 <meta name="google-site-verification" content="-FJY4fKyr1jdoEKVNkbQbNMxMPY9AQi9FJ8zYwGmPfg" />
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -182,6 +181,11 @@ background:#004182;
 transform:scale(1.05);
 }
 
+
+
+
+
+
 /* OPEN BUTTON */
 .open-btn{
 background:#2563eb;
@@ -222,6 +226,114 @@ justify-content:space-between;
 width:100%;
 text-align:center;
 }
+
+
+
+
+
+
+.politics-section{
+    padding:20px 0;
+}
+
+.section-title{
+    font-size:28px;
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+.news-scroll{
+    display:flex;
+    gap:20px;
+    overflow-x:auto;
+    scroll-behavior:smooth;
+    padding-bottom:10px;
+}
+
+.news-scroll::-webkit-scrollbar{
+    height:6px;
+}
+
+.news-scroll::-webkit-scrollbar-thumb{
+    background:#1877f2;
+    border-radius:20px;
+}
+
+.news-card{
+    min-width:320px;
+    max-width:320px;
+    background:#fff;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+    flex-shrink:0;
+    transition:.3s;
+}
+
+.news-card:hover{
+    transform:translateY(-5px);
+}
+
+.news-card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+}
+
+.news-content{
+    padding:15px;
+}
+
+.tag{
+    display:inline-block;
+    background:#e11d48;
+    color:#fff;
+    padding:5px 12px;
+    border-radius:20px;
+    font-size:12px;
+    margin-bottom:10px;
+}
+
+.news-content h3{
+    font-size:18px;
+    margin-bottom:10px;
+}
+
+.news-content p{
+    color:#666;
+    font-size:14px;
+    margin-bottom:15px;
+}
+
+.bottom{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.bottom span{
+    font-size:13px;
+    color:#999;
+}
+
+.bottom a{
+    background:#1877f2;
+    color:#fff;
+    text-decoration:none;
+    padding:8px 14px;
+    border-radius:10px;
+    font-size:13px;
+}
+
+@media(max-width:768px){
+
+.news-card{
+    min-width:280px;
+    max-width:280px;
+}
+
+}
+
 
 }
 
@@ -277,6 +389,225 @@ Maya Hub
 </div>
 
 
+<section class="maya-news-wrap">
+
+<h2 class="maya-news-title">Latest News</h2>
+
+<div class="maya-news-slider">
+
+<div class="news-card">
+<img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=800" alt="">
+<div class="news-content">
+<span class="tag">WORLD</span>
+<h3>Global Leaders Meet For Economic Summit</h3>
+<p>World leaders gather to discuss global trade and economy.</p>
+<div class="bottom">
+<span>01 Jun 2026</span>
+<a href="https://www.reuters.com/world/" target="_blank">Read More</a>
+</div>
+</div>
+</div>
+
+<div class="news-card">
+<img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=800" alt="">
+<div class="news-content">
+<span class="tag">TECH</span>
+<h3>AI Industry Continues Rapid Growth</h3>
+<p>Artificial intelligence adoption expands worldwide.</p>
+<div class="bottom">
+<span>01 Jun 2026</span>
+<a href="https://www.bbc.com/news/technology" target="_blank">Read More</a>
+</div>
+</div>
+</div>
+
+<div class="news-card">
+<img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?w=800" alt="">
+<div class="news-content">
+<span class="tag">BUSINESS</span>
+<h3>Markets Show Positive Momentum</h3>
+<p>Investors react to improving economic indicators.</p>
+<div class="bottom">
+<span>01 Jun 2026</span>
+<a href="https://www.cnbc.com/world/" target="_blank">Read More</a>
+</div>
+</div>
+</div>
+
+<div class="news-card">
+<img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800" alt="">
+<div class="news-content">
+<span class="tag">STARTUP</span>
+<h3>New Startup Raises Millions</h3>
+<p>Technology startup secures major investment.</p>
+<div class="bottom">
+<span>01 Jun 2026</span>
+<a href="https://techcrunch.com/" target="_blank">Read More</a>
+</div>
+</div>
+</div>
+
+<div class="news-card">
+<img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?w=800" alt="">
+<div class="news-content">
+<span class="tag">SPORTS</span>
+<h3>International Tournament Begins</h3>
+<p>Fans celebrate major sporting event.</p>
+<div class="bottom">
+<span>01 Jun 2026</span>
+<a href="https://www.espn.com/" target="_blank">Read More</a>
+</div>
+</div>
+</div>
+
+<div class="news-card">
+<img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=800" alt="">
+<div class="news-content">
+<span class="tag">HEALTH</span>
+<h3>Medical Research Reaches Milestone</h3>
+<p>Scientists reveal new healthcare findings.</p>
+<div class="bottom">
+<span>01 Jun 2026</span>
+<a href="https://www.who.int/news" target="_blank">Read More</a>
+</div>
+</div>
+</div>
+
+<div class="news-card">
+<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800" alt="">
+<div class="news-content">
+<span class="tag">CODING</span>
+<h3>Developers Embrace New Tools</h3>
+<p>Programming ecosystem evolves rapidly.</p>
+<div class="bottom">
+<span>01 Jun 2026</span>
+<a href="https://developer.mozilla.org/" target="_blank">Read More</a>
+</div>
+</div>
+</div>
+
+<div class="news-card">
+<img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800" alt="">
+<div class="news-content">
+<span class="tag">AI</span>
+<h3>Generative AI Breakthrough Announced</h3>
+<p>Researchers introduce advanced AI models.</p>
+<div class="bottom">
+<span>01 Jun 2026</span>
+<a href="https://openai.com/news/" target="_blank">Read More</a>
+</div>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<style>
+.maya-news-wrap{
+padding:20px 10px;
+}
+
+.maya-news-title{
+font-size:28px;
+font-weight:700;
+margin-bottom:15px;
+color:#1e293b;
+}
+
+.maya-news-slider{
+display:flex;
+flex-wrap:nowrap;
+overflow-x:auto;
+overflow-y:hidden;
+gap:15px;
+scroll-behavior:smooth;
+padding-bottom:10px;
+-webkit-overflow-scrolling:touch;
+}
+
+.maya-news-slider::-webkit-scrollbar{
+height:6px;
+}
+
+.maya-news-slider::-webkit-scrollbar-thumb{
+background:#2563eb;
+border-radius:50px;
+}
+
+.news-card{
+flex:0 0 320px;
+background:#fff;
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.news-card:hover{
+transform:translateY(-5px);
+}
+
+.news-card img{
+width:100%;
+height:180px;
+object-fit:cover;
+}
+
+.news-content{
+padding:15px;
+}
+
+.tag{
+display:inline-block;
+background:#2563eb;
+color:white;
+padding:5px 12px;
+border-radius:20px;
+font-size:12px;
+margin-bottom:10px;
+}
+
+.news-content h3{
+font-size:18px;
+margin-bottom:10px;
+}
+
+.news-content p{
+font-size:14px;
+color:#64748b;
+margin-bottom:15px;
+}
+
+.bottom{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.bottom a{
+background:#2563eb;
+color:white;
+text-decoration:none;
+padding:8px 14px;
+border-radius:10px;
+font-size:13px;
+}
+
+@media(max-width:768px){
+.news-card{
+flex:0 0 280px;
+}
+}
+
+@media(max-width:480px){
+.news-card{
+flex:0 0 240px;
+}
+}
+</style>
+
+
 <!-- CONTENT -->
 <div class="container">
 
@@ -292,6 +623,33 @@ Maya Hub
 <i class="fa-brands fa-linkedin-in"></i>
 </a>
 <a class="open-btn" href="https://www.linkedin.com/in/mahbubalombd2006/">Open</a>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- CONTENT -->
+<div class="container">
+
+<div class="card">
+<div class="user-info">
+<h3>sdroni Das</h3>
+<p>Creative Branding Graphic Designer</p>
+<span class="user-id">ID: MH-12</span>
+</div>
+
+<div class="card-right">
+<a class="linkedin" href="https://www.linkedin.com/in/sdronidas91/" target="_blank">
+<i class="fa-brands fa-linkedin-in"></i>
+</a>
+<a class="open-btn" href="https://www.linkedin.com/in/sdronidas91/">Open</a>
 </div>
 </div>
 
