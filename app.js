@@ -4,15 +4,15 @@
   2. Never put a service_role or secret key in browser JavaScript.
 */
 
-const SUPABASE_URL = "YOUR_SUPABASE_PROJECT_URL";
-const SUPABASE_PUBLISHABLE_KEY = "YOUR_SUPABASE_PUBLISHABLE_KEY";
+const SUPABASE_URL = "https://qkvbukohbmvrgrznerkg.supabase.co";
+const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_KAXWhjHYNEAlL1UV0O-ibw_r-sMzPbc";
 
 const newsList = document.getElementById("news-list");
 document.getElementById("year").textContent = new Date().getFullYear();
 
 if (
-  SUPABASE_URL === "YOUR_SUPABASE_PROJECT_URL" ||
-  SUPABASE_PUBLISHABLE_KEY === "YOUR_SUPABASE_PUBLISHABLE_KEY"
+  SUPABASE_URL === "https://qkvbukohbmvrgrznerkg.supabase.co" ||
+  SUPABASE_PUBLISHABLE_KEY === "sb_publishable_KAXWhjHYNEAlL1UV0O-ibw_r-sMzPbc"
 ) {
   showMessage(
     "error-message",
