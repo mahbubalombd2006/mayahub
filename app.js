@@ -10,21 +10,12 @@ const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_KAXWhjHYNEAlL1UV0O-ibw_r-sMzPbc
 const newsList = document.getElementById("news-list");
 document.getElementById("year").textContent = new Date().getFullYear();
 
-if (
-  SUPABASE_URL === "https://qkvbukohbmvrgrznerkg.supabase.co" ||
-  SUPABASE_PUBLISHABLE_KEY === "sb_publishable_KAXWhjHYNEAlL1UV0O-ibw_r-sMzPbc"
-) {
-  showMessage(
-    "error-message",
-    "Setup required: Add your Supabase Project URL and Publishable Key in app.js."
-  );
-} else {
-  const supabaseClient = window.supabase.createClient(
-    SUPABASE_URL,
-    SUPABASE_PUBLISHABLE_KEY
-  );
-  loadNews(supabaseClient);
-}
+const supabaseClient = window.supabase.createClient(
+  SUPABASE_URL,
+  SUPABASE_PUBLISHABLE_KEY
+);
+
+loadNews(supabaseClient);
 
 function showMessage(className, message) {
   newsList.replaceChildren();
