@@ -67,22 +67,29 @@ async function loadNews(client) {
     const card = document.createElement("article");
     card.className = "news-card";
 
-    if (news.image_path) {
-      const { data: imageData, error: imageError } = await client.storage
-        .from("news-images")
-        .createSignedUrl(news.image_path, 3600);
+if (news.image_path) {
+  const image = document.createElement("img");
+  image.className = "news-image";
+  image.alt = news.title || "News image";
+  image.loading = "lazy";
 
-      if (!imageError && imageData && imageData.signedUrl) {
-        const image = document.createElement("img");
-        image.className = "news-image";
-        image.src = imageData.signedUrl;
-        image.alt = news.title || "News image";
-        image.loading = "lazy";
-        card.appendChild(image);
-      } else {
-        console.error("Supabase image error:", imageError);
-      }
+  if (news.image_path.startsWith("http")) {
+    image.src = news.image_path;
+  } else {
+    const { data, error } = await client.storage
+      .from("news-images")
+      .createSignedUrl(news.image_path, 3600);
+
+    if (error) {
+      console.error("Image error:", error);
+    } else {
+      image.src = data.signedUrl;
     }
+  }
+
+  image.onerror = () => console.error("Image failed to load");
+  card.appendChild(image);
+}
 
     const content = document.createElement("div");
     content.className = "news-content";
