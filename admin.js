@@ -31,8 +31,9 @@ function setMessage(el, message, kind = "") {
   el.className = "message" + (kind ? " " + kind : "");
 }
 function configured() {
-  return SUPABASE_URL !== "https://qkvbukohbmvrgrznerkg.supabase.co" &&
-    SUPABASE_PUBLISHABLE_KEY !== "sb_publishable_KAXWhjHYNEAlL1UV0O-ibw_r-sMzPbc";
+  return SUPABASE_URL.startsWith("https://") &&
+    SUPABASE_URL.endsWith(".supabase.co") &&
+    SUPABASE_PUBLISHABLE_KEY.startsWith("sb_publishable_");
 }
 function safeFileName(name) {
   return name.toLowerCase().replace(/[^a-z0-9._-]+/g, "-").slice(-100) || "news-image";
