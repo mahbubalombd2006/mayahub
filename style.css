@@ -149,3 +149,29 @@ body {
     line-height: 1.2;
   }
 }
+
+
+/* ==========================================
+   Responsive Ad Container Matching Post Width
+   ========================================== */
+.news-ad-box {
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 12px;
+  margin-bottom: 24px; /* পোস্ট এবং বিজ্ঞাপনের মাঝখানের ফাঁকা জায়গা */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* মোবাইলের জন্য রেসপনসিভ অ্যাড বক্স */
+@media (max-width: 600px) {
+  .news-ad-box {
+    padding: 8px;
+    margin-bottom: 16px;
+  }
+}
+
